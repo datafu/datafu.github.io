@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>redis 的使用 | Hexo</title>
+  <meta name="keywords" content=" redis ">
+  <meta name="description" content="redis 的使用 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="只属于我的博客一直想拥有自己的博客,可以自言自语,随时随地的写自己的所思所想，😝今天终于拥有了自己的博客,鸡冻鸡冻,没事的时候来这边逛逛,走走自己的痕迹,那也不亦乐乎😆 关于我想做”懒人”到目前为止已经写了篇文章， 共字。 本站访问人数：人次 ， 访问量：次 博客平台这个博客通过 Hexo 生成，部署在 GitHub Pages，主题 是根据 3-hexo 这个主题进行配置的 主要功能：  搜">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="只属于我的博客一直想拥有自己的博客,可以自言自语,随时随地的写自己的所思所想，😝今天终于拥有了自己的博客,鸡冻鸡冻,没事的时候来这边逛逛,走走自己的痕迹,那也不亦乐乎😆 关于我想做”懒人”到目前为止已经写了篇文章， 共字。 本站访问人数：人次 ， 访问量：次 博客平台这个博客通过 Hexo 生成，部署在 GitHub Pages，主题 是根据 3-hexo 这个主题进行配置的 主要功能：  搜">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-07-18T07:16:04.090Z">
+<meta property="article:modified_time" content="2019-08-15T13:41:00.000Z">
+<meta property="article:author" content="想做个&quot;懒&quot;人">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>想做个&#34;懒&#34;人</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/datafu"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="facebook"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(27)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="工具">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        工具
+                        <small>(9)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="工具<--->git">
+                                        
+                                        git
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->mac">
+                                        
+                                        mac
+                                        
+                                            <small>(4
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->markdown">
+                                        
+                                        markdown
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->mysql">
+                                        
+                                        mysql
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->vscode">
+                                        
+                                        vscode
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="大前端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        大前端
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="大前端<--->ios">
+                                        
+                                        ios
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="大前端<--->web">
+                                        
+                                        web
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        后端
+                        <small>(7)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="后端<--->java_use">
+                                        
+                                        java_use
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->mybatis">
+                                        
+                                        mybatis
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->redis">
+                                        
+                                        redis
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->Springboot">
+                                        
+                                        Springboot
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->springcloudalibaba">
+                                        
+                                        springcloudalibaba
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->webrtc">
+                                        
+                                        webrtc
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="架构">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        架构
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="架构<--->cap">
+                                        
+                                        cap
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="思考">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        思考
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="思考<--->得到">
+                                        
+                                        得到
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="OS">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        OS
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="OS<--->linux">
+                                        
+                                        linux
+                                        
+                                            <small>(4
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="snippet">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        snippet
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="snippet<--->java">
+                                        
+                                        java
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="27">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>财富自由</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>重学前端</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>apt</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cap</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ios</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java_snippet</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux base</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mybatis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>myqsql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mysql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>redis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>shell</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>socket</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>springboot</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>springcloudalibaba</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>terminal</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>tomcat</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>use</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vscode</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>webrtc</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All OS linux "
+           href="/2022/07/22/linux/linuxcommand/apt-install/"
+           data-tag="apt"
+           data-author="" >
+            <span class="post-title" title="apt">apt</span>
+            <span class="post-date" title="2022-07-22 09:29:40">2022/07/22</span>
+        </a>
+        
+        
+        <a  class="All 工具 git "
+           href="/2022/07/22/tools/git/git-flow/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git flow">git flow</span>
+            <span class="post-date" title="2022-07-22 09:29:40">2022/07/22</span>
+        </a>
+        
+        
+        <a  class="All 后端 redis "
+           href="/2022/07/22/back_end/java/redis/redis/"
+           data-tag="redis"
+           data-author="" >
+            <span class="post-title" title="redis 的使用">redis 的使用</span>
+            <span class="post-date" title="2022-07-22 09:29:40">2022/07/22</span>
+        </a>
+        
+        
+        <a  class="All 工具 mysql "
+           href="/2021/10/04/tools/server-tools/mysql/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="mysql安装">mysql安装</span>
+            <span class="post-date" title="2021-10-04 13:29:40">2021/10/04</span>
+        </a>
+        
+        
+        <a  class="All 架构 cap "
+           href="/2021/10/04/architecture/base/"
+           data-tag="cap"
+           data-author="" >
+            <span class="post-title" title="cap">cap</span>
+            <span class="post-date" title="2021-10-04 11:29:40">2021/10/04</span>
+        </a>
+        
+        
+        <a  class="All 后端 springcloudalibaba "
+           href="/2021/10/04/back_end/java/Springcloudalibaba/init/"
+           data-tag="springcloudalibaba"
+           data-author="" >
+            <span class="post-title" title="springcloudalibaba">springcloudalibaba</span>
+            <span class="post-date" title="2021-10-04 11:29:40">2021/10/04</span>
+        </a>
+        
+        
+        <a  class="All OS linux "
+           href="/2021/10/02/linux/linuxcommand/shell/"
+           data-tag="shell"
+           data-author="" >
+            <span class="post-title" title="linux shell脚本">linux shell脚本</span>
+            <span class="post-date" title="2021-10-02 12:20:40">2021/10/02</span>
+        </a>
+        
+        
+        <a  class="All 后端 Springboot "
+           href="/2021/10/01/back_end/java/SprintBoot/springboot/"
+           data-tag="springboot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot">SpringBoot</span>
+            <span class="post-date" title="2021-10-01 22:29:40">2021/10/01</span>
+        </a>
+        
+        
+        <a  class="All OS linux "
+           href="/2021/10/01/linux/linuxcommand/linux/"
+           data-tag="linux base"
+           data-author="" >
+            <span class="post-title" title="linux操作系统">linux操作系统</span>
+            <span class="post-date" title="2021-10-01 09:29:40">2021/10/01</span>
+        </a>
+        
+        
+        <a  class="All 后端 java_use "
+           href="/2021/06/21/back_end/java/base_use/"
+           data-tag="use"
+           data-author="" >
+            <span class="post-title" title="Java 一些语法的使用">Java 一些语法的使用</span>
+            <span class="post-date" title="2021-06-21 16:29:40">2021/06/21</span>
+        </a>
+        
+        
+        <a  class="All 后端 java_use "
+           href="/2021/06/21/back_end/java/mysql/mysql/"
+           data-tag="myqsql"
+           data-author="" >
+            <span class="post-title" title="mysql基本知识">mysql基本知识</span>
+            <span class="post-date" title="2021-06-21 16:29:40">2021/06/21</span>
+        </a>
+        
+        
+        <a  class="All snippet java "
+           href="/2021/06/17/SnippetsLab/java/read/"
+           data-tag="java_snippet"
+           data-author="" >
+            <span class="post-title" title="java 代码块">java 代码块</span>
+            <span class="post-date" title="2021-06-17 16:58:51">2021/06/17</span>
+        </a>
+        
+        
+        <a  class="All OS linux "
+           href="/2021/06/17/linux/%E8%B6%A3%E8%B0%88linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/base/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux操作系统">linux操作系统</span>
+            <span class="post-date" title="2021-06-17 15:29:40">2021/06/17</span>
+        </a>
+        
+        
+        <a  class="All 后端 webrtc "
+           href="/2021/06/15/back_end/WebRtc/WebRtc%20Navite/"
+           data-tag="webrtc"
+           data-author="" >
+            <span class="post-title" title="webrtc">webrtc</span>
+            <span class="post-date" title="2021-06-15 16:29:40">2021/06/15</span>
+        </a>
+        
+        
+        <a  class="All 后端 mybatis "
+           href="/2021/06/15/back_end/mybatis/mybatis/"
+           data-tag="mybatis"
+           data-author="" >
+            <span class="post-title" title="mybatis">mybatis</span>
+            <span class="post-date" title="2021-06-15 16:29:40">2021/06/15</span>
+        </a>
+        
+        
+        <a  class="All 工具 git "
+           href="/2021/06/14/tools/git/git-base/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git 简单语法">git 简单语法</span>
+            <span class="post-date" title="2021-06-14 09:29:40">2021/06/14</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/09/30/front-end/web/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF/"
+           data-tag="重学前端"
+           data-author="" >
+            <span class="post-title" title="&lt;极客时间&gt; 重学前端课程">&lt;极客时间&gt; 重学前端课程</span>
+            <span class="post-date" title="2019-09-30 16:10:08">2019/09/30</span>
+        </a>
+        
+        
+        <a  class="All 思考 得到 "
+           href="/2019/09/30/thinking/%20Financial%20Free/"
+           data-tag="财富自由"
+           data-author="" >
+            <span class="post-title" title="财富自由之路">财富自由之路</span>
+            <span class="post-date" title="2019-09-30 15:29:40">2019/09/30</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/29/tools/server-tools/socket/"
+           data-tag="socket"
+           data-author="" >
+            <span class="post-title" title="mac 下安装socekt网络调试工具">mac 下安装socekt网络调试工具</span>
+            <span class="post-date" title="2019-09-29 09:29:40">2019/09/29</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/29/tools/server-tools/terminal/"
+           data-tag="terminal"
+           data-author="" >
+            <span class="post-title" title="mac 下安装terminal 窗口管理工具">mac 下安装terminal 窗口管理工具</span>
+            <span class="post-date" title="2019-09-29 09:29:40">2019/09/29</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/23/tools/server-tools/tomcat/"
+           data-tag="tomcat"
+           data-author="" >
+            <span class="post-title" title="mac 下安装redis">mac 下安装redis</span>
+            <span class="post-date" title="2019-09-23 19:29:40">2019/09/23</span>
+        </a>
+        
+        
+        <a  class="All 工具 markdown "
+           href="/2019/08/16/tools/markdown/read/"
+           data-tag="markdown"
+           data-author="" >
+            <span class="post-title" title="markdown简单语法">markdown简单语法</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 工具 vscode "
+           href="/2019/08/16/tools/vscode/vscode/"
+           data-tag="vscode"
+           data-author="" >
+            <span class="post-title" title="vscode快捷键使用">vscode快捷键使用</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/08/16/tools/server-tools/redis/"
+           data-tag="redis"
+           data-author="" >
+            <span class="post-title" title="mac 下安装redis">mac 下安装redis</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 大前端 ios "
+           href="/2019/08/15/front-end/ios/ios/"
+           data-tag="ios"
+           data-author="" >
+            <span class="post-title" title="ios">ios</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/08/15/front-end/web/Hexo-Github/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="mac下搭建Hexo-Github博客">mac下搭建Hexo-Github博客</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/08/15/front-end/web/vue/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="vue学习之旅">vue学习之旅</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-back_end/java/redis/redis" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">redis 的使用</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="后端">后端</a> > 
+            
+            <a  data-rel="后端&lt;---&gt;redis">redis</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">redis</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2022-07-18 16:35:56'>2022-07-22 09:29</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis"><span class="toc-text">Redis</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis-%E5%AE%89%E8%A3%85"><span class="toc-text">Redis 安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E5%92%8C%E5%85%B3%E9%97%AD"><span class="toc-text">启动和关闭</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8"><span class="toc-text">方法使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-String"><span class="toc-text">1.String</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%81%E4%B9%85%E5%8C%96"><span class="toc-text">持久化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-RDB"><span class="toc-text">1.RDB</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#RDB%E7%BC%BA%E9%99%B7"><span class="toc-text">RDB缺陷</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-RDB-AOF-%E6%B7%B7%E5%90%88%E6%8C%81%E4%B9%85%E5%8C%96%E6%96%B9%E5%BC%8F-%E6%8E%A8%E8%8D%90"><span class="toc-text">4. *RDB-AOF***混合持久化方式(推荐)</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BC%80%E5%90%AF"><span class="toc-text">开启</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6"><span class="toc-text">主从复制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E5%8E%9F%E7%90%86"><span class="toc-text">1.主从复制原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE"><span class="toc-text">主从配置</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F"><span class="toc-text">哨兵模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F-1"><span class="toc-text">哨兵模式</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-text">原理:</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Sentinal%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA"><span class="toc-text">Sentinal集群搭建</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9B%86%E7%BE%A4"><span class="toc-text">集群</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">Java 客户端</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Springboot-%E6%95%B4%E5%90%88-Reids"><span class="toc-text">Springboot 整合 Reids</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E6%89%A9%E5%B1%95"><span class="toc-text">知识扩展</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><p>Redis<strong>的应用场景</strong></p>
+<p>1、缓存</p>
+<p>缓存现在几乎是所有中大型网站都在用的必杀技，合理的利用缓存不仅能够提升网站访问速度，还能大 大降低数据库的压力。Redis提供了键过期功能，也提供了灵活的键淘汰策略，所以，现在Redis用在缓 存的场合非常多。</p>
+<p>2、排行榜 很多网站都有排行榜应用的，如歌曲排行榜、京东的月度销量榜单、商品按时间的上新排行榜等。Redis</p>
+<p>提供的有序集合数据类构能实现各种复杂的排行榜应用。</p>
+<p>3、计数器</p>
+<p>什么是计数器，如电商网站商品的浏览量、视频网站视频的播放数等。为了保证数据实时效，每次浏览 都得给+1，并发量高时如果每次都请求数据库操作无疑是种挑战和压力。Redis提供的incr命令来实现计 数器功能，内存操作，性能非常好，非常适用于这些计数场景。</p>
+<p>4、 社交网络</p>
+<p>点赞、踩、关注&#x2F;被关注、共同好友等是社交网站的基本功能，社交网站的访问量通常来说比较大，而且 传统的关系数据库类型不适合存储这种类型的数据，Redis提供的哈希、集合等数据结构能很方便的的实 现这些功能。</p>
+<p>5、消息系统</p>
+<p>消息队列是大型网站必用中间件，如ActiveMQ、RabbitMQ、Kafka等流行的消息队列中间件，主要用 于业务解耦、流量削峰及异步处理实时性低的业务。Redis提供了发布&#x2F;订阅及阻塞队列功能，能实现一 个简单的消息队列系统。另外，这个不能和专业的消息中间件相比。</p>
+<p>6、分布式会话</p>
+<p>集群模式下，在应用不多的情况下一般使用容器自带的session复制功能就能满足，当应用增多相对复杂 的系统中，一般都会搭建以Redis等内存数据库为中心的session服务，session不再由容器管理，而是由 session服务及内存数据库管理。</p>
+<p>7、分布式锁</p>
+<p>在很多互联网公司中都使用了分布式技术，分布式技术带来的技术挑战是对同一个资源的并发访问，如 全局ID、减库存、秒杀等场景，并发量不大的场景可以使用数据库的悲观锁、乐观锁来实现，但在并发 量高的场合中，利用数据库锁来控制资源的并发访问是不太理想的，大大影响了数据库的性能。可以利 用Redis的setnx功能来编写分布式的锁，如果设置返回1说明获取锁成功，否则获取锁失败，实际应用中 要考虑的细节要更多。</p>
+<h1 id="Redis-安装"><a href="#Redis-安装" class="headerlink" title="Redis 安装"></a>Redis 安装</h1><blockquote>
+<p>wget <a target="_blank" rel="noopener" href="http://download.redis.io/releases/redis-5.0.8.tar.gz">http://download.redis.io/releases/redis-5.0.8.tar.gz</a></p>
+<p>tar zxf redis-5.0.8.tar.gz</p>
+<p>cd redis-5.0.8 &amp;&amp; make &amp;&amp;make install</p>
+<p>&#x2F;&#x2F;make install 后运行文件放到&#x2F;usr&#x2F;loacal&#x2F;bin</p>
+</blockquote>
+<h1 id="启动和关闭"><a href="#启动和关闭" class="headerlink" title="启动和关闭"></a>启动和关闭</h1><ul>
+<li>守护进程模式(推荐)</li>
+</ul>
+<blockquote>
+<p>cp &#x2F;usr&#x2F;local&#x2F;package&#x2F;redis-5.0.8&#x2F;redis.conf &#x2F;usr&#x2F;local&#x2F;bin&#x2F;</p>
+<ol start="2">
+<li>修改配置</li>
+</ol>
+<p>daemonizeyes#守护进程 默认值为:no<br> #bind 127.0.0.1 #绑定地址 将其注释<br> protected-mode no #关闭保护模式，此时外部网络可以直接访问 默认值为:yes</p>
+<p>redis-server &#x2F;usr&#x2F;local&#x2F;bin&#x2F;redis.conf &#x2F;&#x2F;指定配置文件启动</p>
+</blockquote>
+<ul>
+<li><p>docker 启动</p>
+<blockquote>
+<p>&#x2F;&#x2F;查看redis 镜像</p>
+<p>docker ps -a </p>
+<p>&#x2F;&#x2F;启动redis服务</p>
+<p>docker start xxx</p>
+</blockquote>
+</li>
+<li><p>客户端</p>
+<p>可以安装 Redis Desktop Manager 可视化界面</p>
+</li>
+</ul>
+<blockquote>
+<p>redis-cli -h 127.0.0.1 -p 6379</p>
+</blockquote>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h4 id="方法使用"><a href="#方法使用" class="headerlink" title="方法使用"></a>方法使用</h4><h5 id="1-String"><a href="#1-String" class="headerlink" title="1.String"></a>1.String</h5><p>#####2.Hash</p>
+<p>hash叫也散列类型，等价于Java语言的HashMap。其本身又是一个键值对结构，提供了 field(字段) 和 value(字段值)的映射。字段值只能是字符串类型，不支持散列类型、集合类型等其它类型。相当 于一个key对应一个map。(注意这里的value是指field对应的值，不是键对应的值，注意value在不同上 下文的作用。)</p>
+<ul>
+<li>HSET key field value</li>
+</ul>
+<blockquote>
+<ol>
+<li>hset user:1 name 1</li>
+</ol>
+</blockquote>
+<ul>
+<li><p>HGET key filed</p>
+<blockquote>
+<p>hget user:1 name</p>
+</blockquote>
+</li>
+<li><p>删除field</p>
+</li>
+</ul>
+<blockquote>
+<p>hdel user:1 name</p>
+</blockquote>
+<ul>
+<li>批量设置</li>
+</ul>
+<blockquote>
+<p>HMSET key field value field value ..</p>
+<p>hmset user:1 name “2” age “23”</p>
+</blockquote>
+<ul>
+<li>获取所有  HGETALL key</li>
+</ul>
+<blockquote>
+<p>Hgetall user:1</p>
+</blockquote>
+<ul>
+<li>获取所有的field</li>
+</ul>
+<blockquote>
+<p>hkeys user:1</p>
+</blockquote>
+<ul>
+<li>获取所有的values</li>
+</ul>
+<blockquote>
+<p>HVALS key</p>
+</blockquote>
+<ul>
+<li>获取field 个数</li>
+</ul>
+<blockquote>
+<p>Hlen user:1</p>
+</blockquote>
+<p>#####3.List</p>
+<p>Redis的list(列表)是一种线性的有序结构，可以按照元素被推入列表中的顺序来存储元素，并且列表 中的元素可以重复。你可以添加一个元素到列表的头部(左边)或者尾部(右边)。 一个列表最多可以 包含 2 ^32 - 1个元素 (4294967295, 每个列表超过40亿个元素)。</p>
+<ul>
+<li><p>LPUSH key value</p>
+</li>
+<li><p>RPUSH Key value</p>
+</li>
+<li><p>LINSER key BEFORE|AFTER pivot value </p>
+</li>
+<li><p>LRANGE key start stop</p>
+</li>
+<li><p>LLEN key</p>
+</li>
+<li><p>lpop key</p>
+</li>
+<li><p>Rpop key</p>
+</li>
+<li></li>
+</ul>
+<blockquote>
+<p>lrange numbers 1 3</p>
+</blockquote>
+<p>#####4.Set</p>
+<p>set(集合)类型也是用来保存多个的字符串元素，但和列表类型不一样的是，集合中<strong>不允许有重复元素</strong>，并且集合中的元素(member )是无序的，不能通过索引下标获取元素</p>
+<ul>
+<li>SADD key member 添加</li>
+<li>SMEMBERS key 获取所有</li>
+<li>SREM key member 删除</li>
+<li>SINTER key [key] 多个集合交集</li>
+</ul>
+<blockquote>
+<p>sinter user:1 user:2</p>
+</blockquote>
+<ul>
+<li>SUNION key 并集</li>
+</ul>
+<blockquote>
+<p>sunion user:1 user:2</p>
+</blockquote>
+<ul>
+<li>SDIFF key  差集</li>
+</ul>
+<p>#####5.Sorted Set</p>
+<p>有序集合(sorted set)同时具有<strong>“有序”和“集合”</strong>两种性质，这种数据结构中的每个元素都由一个成员和 一个与成员相关联的分值(score)组成，其中成员以字符串方式存储，而分值以双精度浮点数格式存 储。集合中的成员以分数从小到大的排序</p>
+<ul>
+<li>ZADD key [… ] 添加</li>
+<li>ZRANGE key start stop[ WITHSCORES]</li>
+<li>ZINCRBY key increment member 增加成员分数</li>
+<li>ZREM key</li>
+</ul>
+<p>####命令</p>
+<ol>
+<li><p>切换数据库</p>
+<p>Redis服务器在单机状态下在启动时将会创建16个数据库，分别用数字编号0-15，数据库名不可更 改。</p>
+<blockquote>
+<p>select index </p>
+</blockquote>
+</li>
+<li><p>Set </p>
+<blockquote>
+<p>Set name 1</p>
+</blockquote>
+</li>
+<li><p>Del key [key…]</p>
+</li>
+<li><p>INCR key           自增方法</p>
+</li>
+<li><p>INCRBY key increment</p>
+</li>
+</ol>
+<blockquote>
+<p>incrby age 5</p>
+</blockquote>
+<ol start="6">
+<li><p>DECR key.  自减</p>
+</li>
+<li><p>MSET key value [key value]  批量设置</p>
+</li>
+<li><p>MGET key</p>
+</li>
+</ol>
+<h1 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h1><p>edis的高性能是由于其将所有数据都存储在了内存中，但由于记录在内存中的所有数据在系统断电之后 就会丢失，为了使Redis在重启之后仍能保证数据不丢失，需要将数据从内存中同步到硬盘中，这一过程 就是持久化。</p>
+<p>Redis提供了三种持久化方式，分别是RDB持久化方式、AOF持久化方式和RDB-AOF混合持久化</p>
+<h5 id="1-RDB"><a href="#1-RDB" class="headerlink" title="1.RDB"></a>1.RDB</h5><p>RDB持久化是Redis默认使用的持久化功能，该功能可以创建出一个经过压缩的二进制文件，其中包含了 数据库中所有的数据信息。这种方式生成的数据文件也叫快照(snapshotting)文件，该文件以.rdb后 缀结尾，默认会在redis的安装目录下生成该文件。</p>
+<p>######<strong>有三种方式生成</strong></p>
+<ul>
+<li><p>SAVE</p>
+<blockquote>
+<p>save</p>
+</blockquote>
+</li>
+<li><p>BGSAVE</p>
+<blockquote>
+<p>bgsave </p>
+</blockquote>
+</li>
+<li><p>配置文件创建</p>
+</li>
+</ul>
+<p>。需要</p>
+<p>在redis.conf配置文件中默认有此下配置:</p>
+<blockquote>
+<p>Save 99 1</p>
+<p>Save 300 10 </p>
+<p>Save 60 10000</p>
+</blockquote>
+<p>save <seconds> <changes> 接收seconds 和changes两个参数， 前者用于指定触发持久化操作所需的时长，后者用于指定触发持久化操作所需要的修改次数。</p>
+<p>save 900 1 表示900秒钟内进行了一次修改则执行一次BGSAVE命令</p>
+<h6 id="RDB缺陷"><a href="#RDB缺陷" class="headerlink" title="RDB缺陷"></a>RDB缺陷</h6><p><strong>RDB****持久化存在的缺陷</strong> 停机时服务器丢失的数据量将取决于创建RDB文件的时间间隔:间隔越长，停机时丢失的数据也就</p>
+<p>越多。</p>
+<p>RDB持久化是一种全量持久化操作，数据库中的数据量越大消耗的计算资源和内存资源越多，时间 越久。</p>
+<p>#####2.AOF </p>
+<p>与全量式的RDB持久化功能不同，AOF(Append Only File)提供的是增量式的持久功能。这种持久化的 核心原理在于:服务器每次执行完写命令之后，默认每秒钟都会将被执行的命令追加到AOF文件的末<br> 尾。</p>
+<p>AOF文件的保存位置和RDB文件的默认存储位置相同，都是在Redis的安装路径下，默认文件名称为: appendonly.aof</p>
+<p>默认情况下Redis没有开启AOF方式的持久化，需要通过appendonly参数开启:</p>
+<blockquote>
+<p>appendonly yes</p>
+</blockquote>
+<blockquote>
+<p>&#x2F;&#x2F;&#x2F;强制重写AOF</p>
+<p>bgrewriteaof </p>
+</blockquote>
+<p>######AOF持久化存在的缺陷</p>
+<p>AOF文件存储的是协议文本，它的体积要比二进制格式的AOF文件大得多，生成文件的时间也更 多。 恢复数据时AOF需要通过执行AOF中的命令来恢复数据，所花费的时间就更多。而RDB恢复数据时 属于直接恢复，速度更快。</p>
+<p>#####3.比较</p>
+<p>概括:</p>
+<ul>
+<li>RDB保存的数据的当前值，AOF保存的是所有的执行过的命令。</li>
+<li>RDB文件更精简，AOF文件会有很多无用数据 </li>
+<li>RDB可能丢失的数据更多，AOF可能丢失的数据更少。</li>
+</ul>
+<h5 id="4-RDB-AOF-混合持久化方式-推荐"><a href="#4-RDB-AOF-混合持久化方式-推荐" class="headerlink" title="4. *RDB-AOF***混合持久化方式(推荐)"></a>4. *<em>RDB-AOF</em>***混合持久化方式(推荐)</h5><p>Redis 4.0 之后新增的方式，混合持久化是结合了 RDB 和 AOF 的优点，在写入的时候，先把当前的 数据以 RDB 的形式写入文件的开头，再将后续的操作命令以 AOF 的格式存入文件，这样既能保证 Redis 重启时的速度，又能减低数据丢失的风险。</p>
+<h6 id="开启"><a href="#开启" class="headerlink" title="开启"></a>开启</h6><p>开启混合持久化需要做两步:</p>
+<ol>
+<li>开启AOF 持久化:</li>
+</ol>
+<blockquote>
+<p>Append only yes</p>
+</blockquote>
+<ol start="2">
+<li>开启混合持久化</li>
+</ol>
+<ul>
+<li>判断是否开启</li>
+</ul>
+<ol start="2">
+<li><blockquote>
+<p>config get aof-use-rdb-preamble</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li><p>开启方式</p>
+<ul>
+<li><p>命令</p>
+<blockquote>
+<p>&#x2F;&#x2F;缺点是重启 Redis 服务之后，设置的配置就会失效。</p>
+<p>config set aof-use-rdb-preamble yes</p>
+</blockquote>
+</li>
+<li><p>Redis配置文件</p>
+<blockquote>
+<p>aof-use-rdb-preamble yes</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>如果AOF文件过大时候，会自动重写AOF :把当前数据以RDB格式保存，后续指令用AOF。当然也可以 通过命令BGREWRITEAOF来强制服务器重写AOF文件。</p>
+<blockquote>
+<p>BGREWRITEAOF</p>
+</blockquote>
+<h1 id="主从复制"><a href="#主从复制" class="headerlink" title="主从复制"></a>主从复制</h1><h4 id="1-主从复制原理"><a href="#1-主从复制原理" class="headerlink" title="1.主从复制原理"></a>1.主从复制原理</h4><p>主从复制可以减轻主服务器的压力，同时备份数据保证数据的可靠性。主从复制(master-salve replacation)模式是为目标服务器创建多个拥有多个副本的服务器，其中目标服务器被称为主服务器 (master server)，副本服务器被称为从服务器(slave server 或称为replaca)。</p>
+<h4 id="主从配置"><a href="#主从配置" class="headerlink" title="主从配置"></a>主从配置</h4><p>之前版本的Redis，配置为SLAVEOF，现在改为REPLICAOF。主从模式，可以是树状的，从服务属于多 台主服务，且从服务也可以有从服务。主从模式，可实现读写分离;高可用模式下，主服务出现问题， 也可以通过哨兵切换从服务为主服务;可实现主服务不用数据持久化，从服务进行持久化工作，减轻主 服务负担等等。</p>
+<ol>
+<li><p>创建两个Redis实例，一个master(主服务器)一个slave(从服务器)。</p>
+</li>
+<li><p>master实例不做任何特殊配置。</p>
+</li>
+<li><p>修改slave的配置文件</p>
+</li>
+</ol>
+<p>replicaof <masterip> <masterport></p>
+<p>例如</p>
+<blockquote>
+<p>replicaof 127.0.0.2 6379</p>
+</blockquote>
+<h1 id="哨兵模式"><a href="#哨兵模式" class="headerlink" title="哨兵模式"></a>哨兵模式</h1><p><strong>Redis的主从复制模式的弊端</strong>: 一旦主节点由于故障不能提供服务， 需要人工将从节点晋升为主节点，</p>
+<p>同时还要通知应用方更新主节点地址， 对于很多应用场景这种故障处理的方式是无法接受的。 可喜的是Redis从2.8开始正式提供了Redis Sentinel(哨兵) 架构来解决这个问题.</p>
+<h4 id="哨兵模式-1"><a href="#哨兵模式-1" class="headerlink" title="哨兵模式"></a>哨兵模式</h4><p>Sentinel(哨兵)进程是用于监控Redis集群中Master主服务器工作的状态，在Master主服务器发生故障下 线的时候，将它其中一个从服务器转换为主服务器，并使用新的主服务器继续处理命令请求。这种正常 服务器替换下线服务器以维持系统正常运转的操作，一般被称为故障转移(failover)。</p>
+<p>自动进行故障转移，保证了系统的高可用(HA)，其已经被集成在Redis2.6+的版本中，Redis的哨兵模 式到了2.8版本之后就稳定了下来。哨兵(sentinel) 会不断地检查你的Master和Slave是否运作正常。当被 监控的某个Redis节点出现问题时, 哨兵(sentinel) 可以通过 API 向管理员或者其他应用程序发送通知。当 一个Master不能正常工作时，哨兵(sentinel) 会开始一次自动故障转移操作</p>
+<p>######<strong>功能</strong>:</p>
+<ol>
+<li>集群监控:负责监控Redis master和slave进程是否正常工作<ol start="2">
+<li>消息通知:如果某个Redis实例有故障，那么哨兵负责发送消息作为报警通知给管理员 </li>
+<li>故障转移:如果master 服务器挂掉了，会自动转移到slave 服务器上</li>
+<li>配置中心:如果故障转移发生了，通知client客户端新的master地址</li>
+</ol>
+</li>
+</ol>
+<p><strong>Sentinel也需要集群部署，并且Sentinel之间相互监控</strong></p>
+<h6 id="原理"><a href="#原理" class="headerlink" title="原理:"></a>原理:</h6><h6 id="Sentinal集群搭建"><a href="#Sentinal集群搭建" class="headerlink" title="Sentinal集群搭建"></a><strong>Sentinal集群搭建</strong></h6><p>组建Sentinal集群的方法也非常简单，只需要启动过个Sentinal并指定Sentinal要监视的主服务器即可，</p>
+<p>Sentinal会自动发现对方。 为了演示方便我们就复制多个配置文件，模拟多个Sentinal。</p>
+<p> 1、复制sentinal.conf文件并以端口号为后缀，做文件名</p>
+<blockquote>
+<p>cp &#x2F;usr&#x2F;local&#x2F;package&#x2F;redis-5.0.8&#x2F;sentinel.conf &#x2F;usr&#x2F;local&#x2F;bin cp sentinal.conf sentinel26380.conf<br> cp sentinal.conf sentinel26381.conf</p>
+</blockquote>
+<p>2、分别修改三个配置文件 sentinal26379.conf</p>
+<blockquote>
+<p>#端口号<br> port 26379<br> #后台守护进程启动<br> daemonize yes #log日志文件名称，名字随便起不重复就行，防止互相覆盖 logfile “26379.log” #给主服务器起个名字为:mymaster #配置主服务器的地址:192.168.0.38<br> #端口:6379 #判断主服务器客观下线的sentinel数量:2<br> sentinel monitor mymaster 192.168.0.38 6379 2</p>
+</blockquote>
+<p>sentinel26380.conf</p>
+<blockquote>
+<p>#端口号<br> port 26380<br> #后台守护进程启动<br> daemonize yes #log日志文件名称，名字随便起不重复就行，防止互相覆盖 logfile “26380.log” #给主服务器起个名字为:mymaster #配置主服务器的地址:192.168.0.38<br> #端口:6379 #判断主服务器客观下线的sentinel数量:2<br> sentinel monitor mymaster 192.168.0.38 6379 2</p>
+</blockquote>
+<p>sentinel26381.conf</p>
+<blockquote>
+<p>#端口号<br> port 26381<br> #后台守护进程启动<br> daemonize yes #log日志文件名称，名字随便起不重复就行，防止互相覆盖 logfile “26381.log” #给主服务器起个名字为:mymaster #配置主服务器的地址:192.168.0.38<br> #端口:6379 #判断主服务器客观下线的sentinel数量:2<br> sentinel monitor mymaster 192.168.0.38 6379 2</p>
+</blockquote>
+<p>3、依次启动三个sentinel</p>
+<blockquote>
+<p>redis-sentinel sentinel26379.conf</p>
+<p> redis-sentinel sentinel26380.conf ‘</p>
+<p>redis-sentinel sentinel26381.conf</p>
+</blockquote>
+<p>4、登录哨兵</p>
+<blockquote>
+<p>redis-cli -p 26379</p>
+</blockquote>
+<p>5、查看相关信息</p>
+<blockquote>
+<p>127.0.0.1:26379&gt; sentinel masters</p>
+</blockquote>
+<p>######SDOWN(Subjectively Down)和ODOWN (Objectively Down)</p>
+<ol>
+<li>SDOWN和ODOWN 两种失败状态<ol start="2">
+<li>SDOWN是主观宕机，就一个哨兵如果自己觉得一个master宕机了，那么就是主观宕机<ol start="3">
+<li>ODOWN 是客观宕机，如果quorum数量的哨兵都觉得一个master宕机了，那么就是客观宕机<ol start="4">
+<li>SDOWN达成的条件:如果一个哨兵ping一个master，超过了is-master-down-after-milliseconds</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>指定的毫秒数之后，就主观认为master宕机</p>
+<ol start="5">
+<li>ODOWN 达成的条件:如果一个哨兵在指定时间内，收到了quorum指定数量的其他哨兵也认为那</li>
+</ol>
+<p>个master是SDOWN了，那么就认为是ODOWN 了，客观认为master宕机</p>
+<h1 id="集群"><a href="#集群" class="headerlink" title="集群"></a>集群</h1><p>Redis集群是Redis 3.0版本正式开始引入的功能，而Redis 5.0更是在集群原有功能的基础上，进一步添加 了更多新功能，对原有功能做了相当多的优化，使得整个集群系统更简单、易用和高效。</p>
+<p>redis-cli -p 26379</p>
+<p>Redis集群提供了主从复制功能和类似单机版的Redis Sentinal功能，在集群中每个服务器被称为节点 (node)，其中主节点(master node)负责处理客户端发送来的读写命令请求，从节点 (replica&#x2F;slave node)则负责对主节点进行复制和监视，集群中的各个节点将相互监视各自的运行状 况，并在某个主节点下线时，通过提升该节点的从节点为新主节点来继续提供服务。</p>
+<p>**分片:**与单机版Redis将整个数据库放在同一台服务器上的做法不同，Redis集群通过将数据库分散存储 到多个节点上来平衡各个节点的负载压力。具体来说，Redis集群会将整个数据库空间划分为16384个槽 (slot)来实现数据分片(Sharding)，而集群中的各个主节点则会分别负责处理其中的一部分槽。</p>
+<p>当用户尝试将一个键存储到集群中时，客户端会先计算出该键属于哪个槽，接着在记录集群节点分布的 映射表中找出处理该槽的节点，最后再将键存储到相应的节点中。</p>
+<h1 id="Java-客户端"><a href="#Java-客户端" class="headerlink" title="Java 客户端"></a>Java 客户端</h1><h1 id="Springboot-整合-Reids"><a href="#Springboot-整合-Reids" class="headerlink" title="Springboot 整合 Reids"></a>Springboot 整合 Reids</h1><h1 id="知识扩展"><a href="#知识扩展" class="headerlink" title="知识扩展"></a>知识扩展</h1>
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 337950548@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2022 想做个&#34;懒&#34;人
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

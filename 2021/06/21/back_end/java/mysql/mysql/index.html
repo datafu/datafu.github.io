@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>mysql基本知识 | Hexo</title>
+  <meta name="keywords" content=" myqsql ">
+  <meta name="description" content="mysql基本知识 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="只属于我的博客一直想拥有自己的博客,可以自言自语,随时随地的写自己的所思所想，😝今天终于拥有了自己的博客,鸡冻鸡冻,没事的时候来这边逛逛,走走自己的痕迹,那也不亦乐乎😆 关于我想做”懒人”到目前为止已经写了篇文章， 共字。 本站访问人数：人次 ， 访问量：次 博客平台这个博客通过 Hexo 生成，部署在 GitHub Pages，主题 是根据 3-hexo 这个主题进行配置的 主要功能：  搜">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="只属于我的博客一直想拥有自己的博客,可以自言自语,随时随地的写自己的所思所想，😝今天终于拥有了自己的博客,鸡冻鸡冻,没事的时候来这边逛逛,走走自己的痕迹,那也不亦乐乎😆 关于我想做”懒人”到目前为止已经写了篇文章， 共字。 本站访问人数：人次 ， 访问量：次 博客平台这个博客通过 Hexo 生成，部署在 GitHub Pages，主题 是根据 3-hexo 这个主题进行配置的 主要功能：  搜">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-07-18T07:16:04.090Z">
+<meta property="article:modified_time" content="2019-08-15T13:41:00.000Z">
+<meta property="article:author" content="想做个&quot;懒&quot;人">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>想做个&#34;懒&#34;人</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/datafu"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="facebook"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(27)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="工具">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        工具
+                        <small>(9)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="工具<--->git">
+                                        
+                                        git
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->mac">
+                                        
+                                        mac
+                                        
+                                            <small>(4
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->markdown">
+                                        
+                                        markdown
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->mysql">
+                                        
+                                        mysql
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->vscode">
+                                        
+                                        vscode
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="大前端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        大前端
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="大前端<--->ios">
+                                        
+                                        ios
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="大前端<--->web">
+                                        
+                                        web
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        后端
+                        <small>(7)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="后端<--->java_use">
+                                        
+                                        java_use
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->mybatis">
+                                        
+                                        mybatis
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->redis">
+                                        
+                                        redis
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->Springboot">
+                                        
+                                        Springboot
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->springcloudalibaba">
+                                        
+                                        springcloudalibaba
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->webrtc">
+                                        
+                                        webrtc
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="架构">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        架构
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="架构<--->cap">
+                                        
+                                        cap
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="思考">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        思考
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="思考<--->得到">
+                                        
+                                        得到
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="OS">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        OS
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="OS<--->linux">
+                                        
+                                        linux
+                                        
+                                            <small>(4
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="snippet">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        snippet
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="snippet<--->java">
+                                        
+                                        java
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="27">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>财富自由</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>重学前端</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>apt</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cap</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ios</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java_snippet</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux base</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mybatis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>myqsql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mysql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>redis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>shell</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>socket</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>springboot</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>springcloudalibaba</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>terminal</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>tomcat</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>use</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vscode</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>webrtc</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All OS linux "
+           href="/2022/07/22/linux/linuxcommand/apt-install/"
+           data-tag="apt"
+           data-author="" >
+            <span class="post-title" title="apt">apt</span>
+            <span class="post-date" title="2022-07-22 09:29:40">2022/07/22</span>
+        </a>
+        
+        
+        <a  class="All 工具 git "
+           href="/2022/07/22/tools/git/git-flow/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git flow">git flow</span>
+            <span class="post-date" title="2022-07-22 09:29:40">2022/07/22</span>
+        </a>
+        
+        
+        <a  class="All 后端 redis "
+           href="/2022/07/22/back_end/java/redis/redis/"
+           data-tag="redis"
+           data-author="" >
+            <span class="post-title" title="redis 的使用">redis 的使用</span>
+            <span class="post-date" title="2022-07-22 09:29:40">2022/07/22</span>
+        </a>
+        
+        
+        <a  class="All 工具 mysql "
+           href="/2021/10/04/tools/server-tools/mysql/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="mysql安装">mysql安装</span>
+            <span class="post-date" title="2021-10-04 13:29:40">2021/10/04</span>
+        </a>
+        
+        
+        <a  class="All 架构 cap "
+           href="/2021/10/04/architecture/base/"
+           data-tag="cap"
+           data-author="" >
+            <span class="post-title" title="cap">cap</span>
+            <span class="post-date" title="2021-10-04 11:29:40">2021/10/04</span>
+        </a>
+        
+        
+        <a  class="All 后端 springcloudalibaba "
+           href="/2021/10/04/back_end/java/Springcloudalibaba/init/"
+           data-tag="springcloudalibaba"
+           data-author="" >
+            <span class="post-title" title="springcloudalibaba">springcloudalibaba</span>
+            <span class="post-date" title="2021-10-04 11:29:40">2021/10/04</span>
+        </a>
+        
+        
+        <a  class="All OS linux "
+           href="/2021/10/02/linux/linuxcommand/shell/"
+           data-tag="shell"
+           data-author="" >
+            <span class="post-title" title="linux shell脚本">linux shell脚本</span>
+            <span class="post-date" title="2021-10-02 12:20:40">2021/10/02</span>
+        </a>
+        
+        
+        <a  class="All 后端 Springboot "
+           href="/2021/10/01/back_end/java/SprintBoot/springboot/"
+           data-tag="springboot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot">SpringBoot</span>
+            <span class="post-date" title="2021-10-01 22:29:40">2021/10/01</span>
+        </a>
+        
+        
+        <a  class="All OS linux "
+           href="/2021/10/01/linux/linuxcommand/linux/"
+           data-tag="linux base"
+           data-author="" >
+            <span class="post-title" title="linux操作系统">linux操作系统</span>
+            <span class="post-date" title="2021-10-01 09:29:40">2021/10/01</span>
+        </a>
+        
+        
+        <a  class="All 后端 java_use "
+           href="/2021/06/21/back_end/java/base_use/"
+           data-tag="use"
+           data-author="" >
+            <span class="post-title" title="Java 一些语法的使用">Java 一些语法的使用</span>
+            <span class="post-date" title="2021-06-21 16:29:40">2021/06/21</span>
+        </a>
+        
+        
+        <a  class="All 后端 java_use "
+           href="/2021/06/21/back_end/java/mysql/mysql/"
+           data-tag="myqsql"
+           data-author="" >
+            <span class="post-title" title="mysql基本知识">mysql基本知识</span>
+            <span class="post-date" title="2021-06-21 16:29:40">2021/06/21</span>
+        </a>
+        
+        
+        <a  class="All snippet java "
+           href="/2021/06/17/SnippetsLab/java/read/"
+           data-tag="java_snippet"
+           data-author="" >
+            <span class="post-title" title="java 代码块">java 代码块</span>
+            <span class="post-date" title="2021-06-17 16:58:51">2021/06/17</span>
+        </a>
+        
+        
+        <a  class="All OS linux "
+           href="/2021/06/17/linux/%E8%B6%A3%E8%B0%88linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/base/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux操作系统">linux操作系统</span>
+            <span class="post-date" title="2021-06-17 15:29:40">2021/06/17</span>
+        </a>
+        
+        
+        <a  class="All 后端 webrtc "
+           href="/2021/06/15/back_end/WebRtc/WebRtc%20Navite/"
+           data-tag="webrtc"
+           data-author="" >
+            <span class="post-title" title="webrtc">webrtc</span>
+            <span class="post-date" title="2021-06-15 16:29:40">2021/06/15</span>
+        </a>
+        
+        
+        <a  class="All 后端 mybatis "
+           href="/2021/06/15/back_end/mybatis/mybatis/"
+           data-tag="mybatis"
+           data-author="" >
+            <span class="post-title" title="mybatis">mybatis</span>
+            <span class="post-date" title="2021-06-15 16:29:40">2021/06/15</span>
+        </a>
+        
+        
+        <a  class="All 工具 git "
+           href="/2021/06/14/tools/git/git-base/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git 简单语法">git 简单语法</span>
+            <span class="post-date" title="2021-06-14 09:29:40">2021/06/14</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/09/30/front-end/web/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF/"
+           data-tag="重学前端"
+           data-author="" >
+            <span class="post-title" title="&lt;极客时间&gt; 重学前端课程">&lt;极客时间&gt; 重学前端课程</span>
+            <span class="post-date" title="2019-09-30 16:10:08">2019/09/30</span>
+        </a>
+        
+        
+        <a  class="All 思考 得到 "
+           href="/2019/09/30/thinking/%20Financial%20Free/"
+           data-tag="财富自由"
+           data-author="" >
+            <span class="post-title" title="财富自由之路">财富自由之路</span>
+            <span class="post-date" title="2019-09-30 15:29:40">2019/09/30</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/29/tools/server-tools/socket/"
+           data-tag="socket"
+           data-author="" >
+            <span class="post-title" title="mac 下安装socekt网络调试工具">mac 下安装socekt网络调试工具</span>
+            <span class="post-date" title="2019-09-29 09:29:40">2019/09/29</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/29/tools/server-tools/terminal/"
+           data-tag="terminal"
+           data-author="" >
+            <span class="post-title" title="mac 下安装terminal 窗口管理工具">mac 下安装terminal 窗口管理工具</span>
+            <span class="post-date" title="2019-09-29 09:29:40">2019/09/29</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/23/tools/server-tools/tomcat/"
+           data-tag="tomcat"
+           data-author="" >
+            <span class="post-title" title="mac 下安装redis">mac 下安装redis</span>
+            <span class="post-date" title="2019-09-23 19:29:40">2019/09/23</span>
+        </a>
+        
+        
+        <a  class="All 工具 markdown "
+           href="/2019/08/16/tools/markdown/read/"
+           data-tag="markdown"
+           data-author="" >
+            <span class="post-title" title="markdown简单语法">markdown简单语法</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 工具 vscode "
+           href="/2019/08/16/tools/vscode/vscode/"
+           data-tag="vscode"
+           data-author="" >
+            <span class="post-title" title="vscode快捷键使用">vscode快捷键使用</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/08/16/tools/server-tools/redis/"
+           data-tag="redis"
+           data-author="" >
+            <span class="post-title" title="mac 下安装redis">mac 下安装redis</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 大前端 ios "
+           href="/2019/08/15/front-end/ios/ios/"
+           data-tag="ios"
+           data-author="" >
+            <span class="post-title" title="ios">ios</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/08/15/front-end/web/Hexo-Github/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="mac下搭建Hexo-Github博客">mac下搭建Hexo-Github博客</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/08/15/front-end/web/vue/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="vue学习之旅">vue学习之旅</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-back_end/java/mysql/mysql" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">mysql基本知识</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="后端">后端</a> > 
+            
+            <a  data-rel="后端&lt;---&gt;java_use">java_use</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">myqsql</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2022-07-18 16:35:10'>2021-06-21 16:29</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#mysql%E5%9F%BA%E7%A1%80"><span class="toc-text">mysql基础</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85"><span class="toc-text">1. 安装</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5"><span class="toc-text">2.数据库连接</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-SQL%E8%AF%AD%E5%8F%A5%E5%88%86%E7%B1%BB"><span class="toc-text">3.SQL语句分类</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-SQL-%E8%AF%AD%E5%8F%A5"><span class="toc-text">4. SQL 语句</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#5-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C"><span class="toc-text">5. 数据库操作</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#6-%E8%A1%A8%E6%93%8D%E4%BD%9C"><span class="toc-text">6. 表操作</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mysql-%E8%BF%9B%E9%98%B6"><span class="toc-text">mysql 进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-SQL%E7%BA%A6%E6%9D%9F"><span class="toc-text">1. SQL约束</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-2-%E5%88%A0%E9%99%A4%E4%B8%BB%E9%94%AE%E7%BA%A6%E6%9D%9F"><span class="toc-text">1.2 删除主键约束</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-SQL-%E8%AF%AD%E5%8F%A5"><span class="toc-text">2. SQL 语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%A1%A8"><span class="toc-text">创建表</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A1%A8%E4%B9%8B%E9%97%B4%E5%88%B0%E5%85%B3%E7%B3%BB"><span class="toc-text">表之间到关系</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%E8%A1%A8"><span class="toc-text">分类表</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%9A%E8%A1%A8%E5%85%B3%E7%B3%BB"><span class="toc-text">多表关系</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2%E6%96%B9%E5%BC%8F"><span class="toc-text">多表查询方式</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">子查询</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#1-%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81"><span class="toc-text">1. 中文乱码</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-%E5%AF%86%E7%A0%81%E5%BF%98%E8%AE%B0"><span class="toc-text">2.密码忘记</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-text">注意点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-text">1.面试题</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="mysql基础"><a href="#mysql基础" class="headerlink" title="mysql基础"></a>mysql基础</h3><h6 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h6><p>参考 tools&#x2F;server-tools&#x2F;mysql.md 进行安装</p>
+<h6 id="2-数据库连接"><a href="#2-数据库连接" class="headerlink" title="2.数据库连接"></a>2.数据库连接</h6><blockquote>
+<p>– 格式1，本地连接:cmd&gt; mysql –u用户名 –p密码</p>
+<p>mysql -uroot   –proot</p>
+<p>– 格式2，远程连接:cmd&gt; mysql –host&#x3D;ip地址 –user&#x3D;用户名</p>
+<p> –password&#x3D;密码 2 </p>
+<p>mysql –host&#x3D;127.0.0.1 –user&#x3D;root </p>
+<p>–password&#x3D;root</p>
+</blockquote>
+<ol start="2">
+<li>还可以使用 navicat连接</li>
+</ol>
+<h6 id="3-SQL语句分类"><a href="#3-SQL语句分类" class="headerlink" title="3.SQL语句分类"></a>3.<strong>SQL</strong>语句分类</h6><p>数据库是不认识JAVA语言的，但是我们同样要与数据库交互，这时需要使用到数据库认识的语言【SQL 语句】，它是数据库的代码。<br> 结构化查询语言(Structured Query Language)简称SQL，是关系型数据库管理系统都需要遵循的规范。 不同的数据库生产厂商都支持SQL语句，但都有特有内容。</p>
+<ul>
+<li><p>数据定义语言:简称DDL(Data Definition Language)，用来定义数据库对象:数据库，表， 列等。关键字:create，alter，drop等</p>
+</li>
+<li><p>数据控制语言:简称DCL(Data Control Language)，用来定义数据库的访问权限和安全级别，及创建用户。</p>
+</li>
+<li><p>数据操作语言:简称<strong>DML(Data Manipulation Language)<strong>，用来对数据库中表的记录进行 更新。关键字:<strong>insert</strong>，</strong>delete</strong>，<strong>update</strong>等</p>
+</li>
+<li><p>数据查询语言:简称<strong>DQL(Data Query Language)<strong>，用来查询数据库中表的记录。关键字: <strong>select</strong>，</strong>from</strong>，<strong>where</strong>等</p>
+</li>
+</ul>
+<h6 id="4-SQL-语句"><a href="#4-SQL-语句" class="headerlink" title="4. SQL 语句"></a>4. SQL 语句</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">|  类型名称   |    说明  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">|int     | 整数类型|</span><br><span class="line"></span><br><span class="line">|double   | 小数类型|</span><br><span class="line"></span><br><span class="line">|decimal(m,d)| 指定整数位与小数位⻓度的小数类型|</span><br><span class="line"></span><br><span class="line">|date   |  日期类型，格式为yyyy-MM-dd，包含年月日，不包含时分秒| </span><br><span class="line"></span><br><span class="line">|datetime  | 日期类型，格式为 YYYY-MM-DD HH:MM:SS，包含年月日时分秒|</span><br><span class="line"></span><br><span class="line">|timestamp |  日期类型，时间戳|</span><br><span class="line"></span><br><span class="line">|varchar(M) | 文本类型， M为0~65535之间的整数|</span><br><span class="line"></span><br><span class="line">|char(M)    |文本类型, M为0~65535之间的整数|</span><br></pre></td></tr></table></figure>
+
+<h6 id="5-数据库操作"><a href="#5-数据库操作" class="headerlink" title="5. 数据库操作"></a>5. 数据库操作</h6><p><strong>5.1创建</strong></p>
+<blockquote>
+<p>&#x2F;<em>创建数据库</em>&#x2F;<br> – 方式一: 使用指定的字符编码表,创建数据库. </p>
+<p>格式: create database 数据库名 character set 字符编码;</p>
+<p> – 方式二: 使用默认的字符编码表,创建数据库. </p>
+<p>格式: create database 数据库名; </p>
+<p>CREATE DATABASE mydb CHARACTER SET utf8; – 方式一</p>
+<p> CREATE DATABASE mydb2; – 方式二</p>
+</blockquote>
+<p><strong>5.2查看数据库</strong></p>
+<blockquote>
+<p>&#x2F;<em>查看数据库</em>&#x2F;<br> – 查看所有的数据库. 格式: show databases; SHOW DATABASES;</p>
+<p>– 查看指定数据库的字符编码. 格式: show create database 数据库名; SHOW CREATE DATABASE mydb;<br> SHOW CREATE DATABASE mydb2;</p>
+</blockquote>
+<p><strong>5.3删除数据库</strong></p>
+<blockquote>
+<p>&#x2F;<em>删除数据库</em>&#x2F;<br> – 删除数据库. 格式: drop database 数据库名; DROP DATABASE mydb2;</p>
+</blockquote>
+<p><strong>5.4 使用数据库</strong></p>
+<blockquote>
+<p>&#x2F;<em>使用数据库</em>&#x2F;<br> – 查看当前使用的数据库. 格式: select database(); SELECT DATABASE();</p>
+<p>– 设置当前使用的数据库. 格式: use 数据库名; USE mydb;</p>
+</blockquote>
+<h6 id="6-表操作"><a href="#6-表操作" class="headerlink" title="6. 表操作"></a>6. 表操作</h6><p><strong>6.1 创建</strong></p>
+<blockquote>
+<p>&#x2F;*<br> 创建表, 格式:</p>
+<p>create table 表名 (<br> 字段名 数据类型[⻓度] [约束], 字段名 数据类型[⻓度] [约束], …</p>
+<p>);<br> 注:[]中的内容是可选项<br> *&#x2F;<br> – 创建表student, 字段包括 编号id\ 姓名name\ 年龄age </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE student (</span><br><span class="line">id INT,</span><br><span class="line">   NAME VARCHAR(100),</span><br><span class="line">   age INT</span><br></pre></td></tr></table></figure>
+
+<p>);</p>
+<p>– 创建表users, 字段包括 编号id\ 用户名username \ 密码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">create password CREATE TABLE users (</span><br><span class="line">id INT,</span><br><span class="line"> username VARCHAR(100),</span><br><span class="line"> PASSWORD VARCHAR(100)</span><br></pre></td></tr></table></figure>
+
+<p>);</p>
+</blockquote>
+<p><strong>6.2 查看</strong></p>
+<blockquote>
+<p>– 查看所有表, 格式: show tables<br> SHOW TABLES;<br> – 查看指定表的建表结构, 格式: show create table 表名; SHOW CREATE TABLE users;</p>
+</blockquote>
+<p><strong>6.3删除表</strong></p>
+<blockquote>
+<p>– 删除表, 格式: drop table 表名; 2 DROPTABLEusers;</p>
+</blockquote>
+<p><strong>6.4 修改表结构</strong></p>
+<blockquote>
+<p>&#x2F;*</p>
+<p>对表中的列进行修改<br> \1. 添加新的列, 格式: alter table 表名 add 新列名 数据类型(⻓度);<br> \2. 修改列的数据类型(⻓度), 格式: alter table 表名 modify 列名 修改后的数据类型(⻓ 度);</p>
+<ol>
+<li>修改列的名称, 格式: alter table 表名 change 列名 新列名 新列名的数据类型(⻓度);</li>
+<li>删除指定列, 格式: alter table 表名 drop 列名;</li>
+</ol>
+<p>*&#x2F;<br> ALTER TABLE student ADD <code>desc</code> VARCHAR(100); – 添加新的列<br> ALTER TABLE student MODIFY <code>desc</code> VARCHAR(50);– 修改列的数据类型(⻓度) ALTER TABLE student CHANGE <code>desc</code> description VARCHAR(100);– 修改列的名称 ALTER TABLE student DROP description;– 删除指定列</p>
+<p>&#x2F;*</p>
+<p>对表进行修改</p>
+<ol>
+<li>修改表的名称, 格式: rename table 表名 to 新表名;</li>
+<li>修改表的字符编码, 格式: alter table 表名 character set 字符编码;</li>
+</ol>
+<p>*&#x2F;<br> RENAME TABLE student TO stu; – 修改表的名称<br> ALTER TABLE stu CHARACTER SET gbk; – 修改表的字符编码</p>
+</blockquote>
+<p><strong>6.5 插入表</strong></p>
+<blockquote>
+<p>&#x2F;*</p>
+<p>插入表记录<br> 方式一, 对指定的字段插入值, 格式: insert into 表名(字段1, 字段2, …) values (值 1, 值2, …);<br> 方式二, 对所有字段插入值, 格式: insert into 表名 values(值1, 值2, …);<br> *&#x2F;</p>
+<p>INSERT INTO student(id, NAME, age) VALUES(1, ‘1’, 24); INSERT INTO student(NAME, age) VALUES(‘2’, 22);<br> INSERT INTO student(id, NAME, age) VALUES(3, ‘3’, NULL);</p>
+<p>INSERT INTO student VALUES(4, ‘4’, 26); INSERT INTO student VALUES(5, ‘zhangsan’, 26),(6,’6’,27);</p>
+</blockquote>
+<p><strong>6.5 更新表记录</strong></p>
+<blockquote>
+<p>– 更新表记录, 格式: update 表名 set 字段1&#x3D;值, 字段2&#x3D;值… where 条件; </p>
+<p>UPDATE student SET NAME&#x3D;’lili’, age&#x3D;21 WHERE id&#x3D;1;<br> UPDATE student SET age&#x3D;25 WHERE age&#x3D;27;</p>
+</blockquote>
+<p><strong>6.6 删除</strong></p>
+<blockquote>
+<p>– 删除表记录, 格式: delete from 表名 where 条件; </p>
+<p>DELETE FROM student WHERE id&#x3D;1;<br> DELETE FROM student WHERE age IS NULL;</p>
+</blockquote>
+<h3 id="mysql-进阶"><a href="#mysql-进阶" class="headerlink" title="mysql 进阶"></a>mysql 进阶</h3><h4 id="1-SQL约束"><a href="#1-SQL约束" class="headerlink" title="1. SQL约束"></a>1. SQL约束</h4><ul>
+<li>什么是约束<br> 约束, 其实就是一种限制条件, 让你不能超出这个控制范围.</li>
+</ul>
+<p>而在数据库中的约束, 就是指 表中的数据内容 不能胡乱填写, 必须按照要求填写. 好保证数据的完整性与 安全性.</p>
+<blockquote>
+<p>– 准备数据<br> CREATE TABLE persons (</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  pid int,</span><br><span class="line">  lastname varchar(255),</span><br><span class="line">  firstname varchar(255),</span><br><span class="line">  address varchar(255)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+<p> insert into persons values(1, ‘星驰’,’周’,’香港’);</p>
+<p> insert into persons values(1, ‘德华’,’刘’,’香港’); </p>
+<p>insert into persons values(2, ‘德华’,’刘’,null); </p>
+<p>insert into persons values(null, ‘润发’,’周’,’香港’);</p>
+</blockquote>
+<p>######<strong>1.1</strong> 主键约束</p>
+<p>RIMARY KEY 约束:</p>
+<p>主键必须包含唯一的值, 不能重复。<br> 主键列不能包含 NULL 值。 每个表都应该有一个主键，并且每个表只能有一个主键。</p>
+<p><strong>添加主键约束</strong></p>
+<ul>
+<li><p>方式一:创建表时，在字段描述处，声明指定字段为主键: </p>
+<p>格式: 字段名 数据类型[⻓度] PRIMARY KEY</p>
+</li>
+</ul>
+<blockquote>
+<p>CREATETABLEpersons(<br> pid int primary key, – 添加了主键约束 lastname varchar(255),<br> firstname varchar(255),<br> address varchar(255)</p>
+<p>);<br> INSERTINTOpersonsVALUES(1,’星驰’,’周’,’香港’);<br> INSERT INTO persons VALUES(1, ‘德华’,’刘’,’香港’); – 设置主键后, 插入失败, 值 重复<br> INSERTINTOpersonsVALUES(2,’德华’,’刘’,NULL);<br> INSERT INTO persons VALUES(NULL, ‘润发’,’周’,’香港’); – 设置主键后, 插入失败, 值不能为 NULL</p>
+</blockquote>
+<p>&#x2F;&#x2F; 加个tab键 就变成 空心了</p>
+<ul>
+<li>方式二:创建表时，在constraint约束区域，声明指定字段为主键:<ul>
+<li>格式: [constraint 名称] primary key (字段列表) </li>
+<li>关键字constraint可以省略，如果需要为主键命名，constraint不能省略，主键名称一般没 用。 </li>
+<li>字段列表需要使用小括号括住，如果有多字段需要使用逗号分隔。声明两个以上字段为主 键，我们称为联合主键。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE persons (</span><br><span class="line">  pid int,</span><br></pre></td></tr></table></figure>
+
+<p>lastname varchar(255),<br> firstname varchar(255),<br> address varchar(255),<br> constraint pk_persons primary key (pid) – 添加主键约束, 单一字段</p>
+<p>);</p>
+<p>CREATE TABLE persons (<br>  pid INT,</p>
+<p>lastname VARCHAR(255),<br> firstname VARCHAR(255),<br> address VARCHAR(255),<br> CONSTRAINT pk_persons PRIMARY KEY (lastname, firstname) – 添加主键约束,</p>
+<p>多个字段, 我们称为联合主键。<br> );<br> INSERT INTO persons VALUES(1, ‘星驰’,’周’,’香港’);<br> INSERT INTO persons VALUES(1, ‘德华’,’刘’,’香港’);<br> INSERT INTO persons VALUES(2, ‘德华’,’刘’,NULL); – 插入失败</p>
+</blockquote>
+<ul>
+<li><p>方式三:创建表之后，通过修改表结构，声明指定字段为主键</p>
+<blockquote>
+<p>alter table persons add constraint pk_persons primary key (lastname, firstname); – 添加联合主键</p>
+</blockquote>
+</li>
+</ul>
+<h6 id="1-2-删除主键约束"><a href="#1-2-删除主键约束" class="headerlink" title="1.2 删除主键约束"></a>1.2 删除主键约束</h6><blockquote>
+<p>altertablepersonsdropprimarykey;</p>
+</blockquote>
+<h4 id="2-SQL-语句"><a href="#2-SQL-语句" class="headerlink" title="2. SQL 语句"></a>2. SQL 语句</h4><h4 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h4><blockquote>
+<p>#创建商品表:<br> create table product(</p>
+<p>pid int primary key, pname varchar(20), price double, category_id varchar(32)</p>
+<p>);<br> INSERT INTO product(pid,pname,price,category_id) VALUES(1,’联 想’,5000,’c001’);<br> INSERT INTO product(pid,pname,price,category_id) VALUES(2,’海 尔’,3000,’c001’);<br> INSERT INTO product(pid,pname,price,category_id) VALUES(3,’雷 神’,5000,’c001’);<br> INSERT INTO product(pid,pname,price,category_id) VALUES(4,’JACK JONES’,800,’c002’);</p>
+</blockquote>
+<p>####简单查询</p>
+<blockquote>
+<p>SELECT * from product;<br> – 查询商品名和商品价格.<br> select pname,price from product;<br> – 查询价格,去掉重复值.<br> select DISTINCT price from product;<br> – 查询结果是表达式(运算查询):将所有商品的价格+10元进行显示. select pname,price+10 from product;<br> – 别名查询.使用的关键字是as(as可以省略的).列别名<br> select pname,price+10 as ‘价格’ from product;<br> select pname,price+10 ‘价格’ from product;<br> – 别名查询.使用的关键字是as(as可以省略的).表别名<br> select * from product as p;<br> select * from product p;</p>
+</blockquote>
+<p>####条件查询</p>
+<blockquote>
+<p>#查询商品名称为“花花公子”的商品所有信息:<br> select * from product where pname&#x3D;’花花公子’; #查询价格为800商品<br> select * from product where price&#x3D;800; #查询价格不是800的所有商品<br> select * from product where price&lt;&gt;800;<br> select * from product where price!&#x3D;800; – mysql特有的符号 #查询商品价格大于60元的所有商品信息<br> select * from product where price&gt;60;</p>
+<p>#查询商品价格在200到1000之间所有商品<br> select * from product where price&gt;&#x3D;200 and price&lt;&#x3D;1000; select * from product where price between 200 and 1000; #查询商品价格是200或800的所有商品<br> select * from product where price&#x3D;200 or price&#x3D;800; select * from product where price in(200,800);<br> # LIKe 中的 %代表匹配任意⻓度的任意字符; _代表匹配一个任意字符 #查询商品名称含有’霸’字的所有商品<br> select * from product where pname like ‘%霸%’; #查询商品名称以’香’开头的所有商品<br> select * from product where pname like ‘香%’; #查询商品名称第二个字为’想’的所有商品<br> select * from product where pname like ‘_想%’; #商品没有分类id的商品<br> select * from product where category_id is NULL; #查询有分类id的商品<br> select * from product where category_id is NOT NULL;</p>
+</blockquote>
+<p>####排序查询</p>
+<blockquote>
+<p>#使用价格排序(降序)<br> select * from product order by price desc; #在价格排序(降序)的基础上，以分类排序(降序)<br> select * from product order by price desc,category_id desc; #显示商品的价格(去重复)，并排序(降序)<br> select DISTINCT price from product order by price desc;</p>
+</blockquote>
+<p>####聚合查询</p>
+<blockquote>
+<p>#查询商品的总条数<br> select count(*) from product; – 不推荐 select count(pid) from product;<br> select count(category_id) from product;</p>
+<p>#查询价格大于200商品的总条数<br> select count(*) from product where price&gt;200;</p>
+<p>#查询分类为’c001’的所有商品的价格总和<br> select sum(price) from product where category_id&#x3D;’c001’;</p>
+<p>#查询分类为’c002’所有商品的平均价格<br> select avg(price) from product where category_id&#x3D;’c002’;</p>
+<p>#查询商品的最大价格和最小价格<br> select max(price),min(price) from product;</p>
+</blockquote>
+<p>####分组查询</p>
+<blockquote>
+<ol>
+<li>#统计各个分类商品的个数selectcategory_id,count(*)fromproductgroupbycategory_id;</li>
+</ol>
+<p>  #统计各个分类商品的个数,且只显示个数大于1的信息</p>
+<p>SELECTcategory_id,count(*)fromproduct GROUPBYcategory_idHAVING</p>
+<p>count(*)&gt;1;</p>
+<p>  #统计价格&gt;200元的 各个分类商品的个数,且只显示个数大于1的信息</p>
+<p> select category_id,count(<em>) from produc twhere price&gt;200 group by category_id  HAVING count(</em>)&gt;1;</p>
+</blockquote>
+<p>####条数限制查询</p>
+<blockquote>
+<p>分⻚查询格式:<br> SELECT * FROM 表名 LIMIT startRow,pageSize;</p>
+<p>例如:</p>
+<p>select * from products limit 0,5; #第一⻚，每⻚显示5条。<br> select * from products limit 5,5; #第二⻚，每⻚显示5条。<br> select * from products limit 10,5; #第三⻚，每⻚显示5条。<br> select * from products limit startRow,5; #第curPage⻚，每⻚显示5条, startRow 的值如何计算呢?</p>
+<p>– 后台计算出⻚码、⻚数(⻚大小)<br> – 分⻚需要的相关数据结果分析如下,<br> – 注意:下面是伪代码不用于执行<br> int curPage &#x3D; 2; – 当前⻚数<br> int pageSize &#x3D; 5; – 每⻚显示数量<br> int startRow &#x3D; (curPage - 1) * pageSize; – 当前⻚, 记录开始的位置(行数)计算 int totalSize &#x3D; select count(*) from products; – 记录总数量<br> int totalPage &#x3D; Math.ceil(totalSize * 1.0 &#x2F; pageSize); – 总⻚数</p>
+</blockquote>
+<p>####多表查询</p>
+<h5 id="表之间到关系"><a href="#表之间到关系" class="headerlink" title="表之间到关系"></a>表之间到关系</h5><ul>
+<li><p>一对一关系:</p>
+<ul>
+<li><p>在实际的开发中应用不多.因为一对一可以创建成一张表.</p>
+</li>
+<li><p>常⻅实例:身份证表与员工信息表</p>
+</li>
+</ul>
+</li>
+<li><p>一对多关系:</p>
+<ul>
+<li>常⻅实例:客户和订单，分类和商品，部⻔和员工, 省份和城市</li>
+</ul>
+</li>
+<li><p>多对多关系:</p>
+<ul>
+<li>常⻅实例:学生和课程、用户和⻆色, 演员和电影, 商品和订单</li>
+</ul>
+</li>
+</ul>
+<p>#####.外键约束</p>
+<p>有两张表“分类表”和“商品表”，为了表明商品属于哪个分类，通常情况下，我们将在商品表上 添加一列，用于存放分类cid的信息，此列称为:外键</p>
+<blockquote>
+<p>alter table 从表 add [constraint][外键名称] foreign key (从表外键字段名) references 主表 (主表的主键);</p>
+<p>&#x2F;&#x2F;[外键名称]用于删除外键约束的，一般建议“_fk”结尾</p>
+<p>alter table 从表 drop foreign key 外键名称</p>
+</blockquote>
+<blockquote>
+<h1 id="分类表"><a href="#分类表" class="headerlink" title="分类表"></a>分类表</h1><p>CREATE TABLE category (</p>
+<p> cid VARCHAR(32) PRIMARY KEY ,<br> cname VARCHAR(50)<br>);</p>
+<p>#商品表<br>CREATE TABLE products(</p>
+<p>pid VARCHAR(32) PRIMARY KEY ,<br>pname VARCHAR(50),<br>price INT,<br>flag VARCHAR(2), #是否上架标记为:1表示上架、0表示下架 category_id VARCHAR(32)</p>
+<p>);</p>
+<p>#分类<br>INSERT INTO category(cid,cname) VALUES(‘c001’,’家电’);<br>INSERT INTO category(cid,cname) VALUES(‘c002’,’服饰’);<br>INSERT INTO category(cid,cname) VALUES(‘c003’,’化妆品’);<br>#商品<br>INSERT INTO products(pid, pname,price,flag,category_id) VALUES(‘p001’,’联 想’,5000,’1’,’c001’);</p>
+</blockquote>
+<h5 id="多表关系"><a href="#多表关系" class="headerlink" title="多表关系"></a>多表关系</h5><p>######1.省和市</p>
+<ul>
+<li>方案1:多张表，一对多</li>
+</ul>
+<blockquote>
+<p>– 创建省份表<br> create table province(</p>
+<p>pid int PRIMARY KEY,<br> pname varchar(32), – 省份名称 description varchar(100) – 描述</p>
+<p>);</p>
+<p>– 创建城市表<br> create table city (</p>
+<p>cid int PRIMARY KEY,<br> cname varchar(32), – 城市名称<br> description varchar(100), – 描述<br> province_id int,<br> CONSTRAINT city_province_fk foreign key(province_id) references   province(pid) –创建外键<br>);</p>
+</blockquote>
+<ul>
+<li>方案2:一张表，自关联一对多</li>
+</ul>
+<blockquote>
+<p>create table area (<br> id int PRIMARY key AUTO_INCREMENT,<br> <code>name</code> varchar(32),<br> description varchar(100),<br> parent_id int,<br> CONSTRAINT area_area_fk FOREIGN KEY(parent_id) REFERENCES area(id)</p>
+<p>);</p>
+<p>INSERT into area values(null, ‘辽宁省’, ‘这是一个省份’, null); INSERT into area values(null, ‘大连市’, ‘这是一个城市’, 1); INSERT into area values(null, ‘沈阳市’, ‘这是一个城市’, 1); INSERT into area values(null, ‘河北省’, ‘这是一个省份’, null); INSERT into area values(null, ‘石家庄市’, ‘这是一个城市’, 4); INSERT into area values(null, ‘保定市’, ‘这是一个城市’, 4);</p>
+</blockquote>
+<p>######2. 用户和角色</p>
+<blockquote>
+<p>– 用户表<br> create table <code>user</code> (</p>
+<p>uid varchar(32) PRIMARY KEY, username varchar(32), <code>password</code> varchar(32)</p>
+<p>);</p>
+<p>– ⻆色表<br> create table role (</p>
+<p>   rid varchar(32) PRIMARY KEY,<br>    rname varchar(32)</p>
+<p>};</p>
+<p>– 中间表<br> create table user_role(</p>
+<p>user_id varchar(32),<br> role_id varchar(32),<br> CONSTRAINT user_role_pk PRIMARY KEY(user_id,role_id),<br> CONSTRAINT user_id_fk FOREIGN KEY(user_id) REFERENCES <code>user</code>(uid), CONSTRAINT role_id_fk FOREIGN KEY(role_id) REFERENCES role(rid)</p>
+<p>);</p>
+</blockquote>
+<p>#####多表查询</p>
+<blockquote>
+<ol>
+<li>INSERTINTOcategory(cid,cname)VALUES(‘c001’,’家电’);</li>
+<li>3  INSERTINTOcategory(cid,cname)VALUES(‘c002’,’服饰’);</li>
+<li>4  INSERTINTOcategory(cid,cname)VALUES(‘c003’,’化妆品’);</li>
+<li>5  #商品</li>
+<li>6  INSERTINTOproducts(pid,pname,price,flag,category_id)VALUES(‘p001’,’联 想’,5000,’1’,’c001’);</li>
+<li>7  INSERTINTOproducts(pid,pname,price,flag,category_id)VALUES(‘p002’,’海 尔’,3000,’1’,’c001’);</li>
+<li>8  INSERTINTOproducts(pid,pname,price,flag,category_id)VALUES(‘p003’,’雷 神’,5000,’1’,’c001’);</li>
+</ol>
+<p>9</p>
+<ol>
+<li><p>10  INSERTINTOproducts(pid,pname,price,flag,category_id)</p>
+<p>VALUES(‘p004’,’JACK JONES’,800,’1’,’c002’);</p>
+</li>
+<li><p>11  INSERTINTOproducts(pid,pname,price,flag,category_id)VALUES(‘p005’,’真</p>
+<p>维斯’,200,’1’,’c002’);</p>
+</li>
+<li><p>12  INSERTINTOproducts(pid,pname,price,flag,category_id)VALUES(‘p006’,’花</p>
+<p>花公子’,440,’1’,’c002’);</p>
+</li>
+<li><p>13  INSERTINTOproducts(pid,pname,price,flag,category_id)VALUES(‘p007’,’劲</p>
+<p>霸’,2000,’1’,’c002’);</p>
+</li>
+</ol>
+<p>14</p>
+<ol>
+<li>15  INSERTINTOproducts(pid,pname,price,flag,category_id)VALUES(‘p008’,’香 奈儿’,800,’1’,’c003’);</li>
+<li>16  INSERTINTOproducts(pid,pname,price,flag,category_id)VALUES(‘p009’,’相 宜本草’,200,’1’,’c003’);</li>
+<li></li>
+</ol>
+</blockquote>
+<h6 id="多表查询方式"><a href="#多表查询方式" class="headerlink" title="多表查询方式"></a>多表查询方式</h6><ul>
+<li><p>交叉连接查询</p>
+<p>语法: select * from A,B;</p>
+</li>
+</ul>
+<blockquote>
+</blockquote>
+<ul>
+<li><p>内连接查询</p>
+<p>连接查询**(<strong>使用的关键字 <strong>inner join – inner</strong>可以省略</strong>)**</p>
+<ul>
+<li>隐式内连接: select * from A,B where 条件; </li>
+<li>显示内连接: select * from A inner join B on 条件;</li>
+</ul>
+<blockquote>
+<p>– 查询那些分类的商品已经上架 – 隐式内连接</p>
+<p> SELECT DISTINCT</p>
+<p>*FROM</p>
+<p>category c,</p>
+<p>products p</p>
+<p>WHERE</p>
+<p>c.cid &#x3D; p.category_id;</p>
+<p>– 显示内连接 </p>
+<p>SELECT DISTINCT</p>
+<p>*FROM<br>    category c INNER JOIN products p</p>
+<p>ON</p>
+<p>c.cid &#x3D; p.category_id;</p>
+</blockquote>
+</li>
+<li><p>外连接查询</p>
+<p>外连接查询**(<strong>使用的关键字 <strong>outer join – outer</strong>可以省略</strong>)**</p>
+<ul>
+<li>左外连接:left outer join<ul>
+<li>select * from A left outer join B on 条件;</li>
+</ul>
+</li>
+<li>右外连接:right outer join<ul>
+<li>select * from A right outer join B on 条件;</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>#2.查询所有分类商品的个数<br> #左外连接<br> INSERT INTO category(cid,cname) VALUES(‘c004’,’奢侈品’);</p>
+<p>SELECT cname,COUNT(category_id)<br> FROM category c LEFT OUTER JOIN products p ON c.cid &#x3D; p.category_id<br> GROUP BY cname;</p>
+</blockquote>
+</li>
+</ul>
+<h6 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h6><p>一条select语句结果作为另一条select语法一部分(查询条件，查询结果，表等)。 语法:</p>
+<blockquote>
+<p> select ….查询字段 … from … 表.. where … 查询条件</p>
+</blockquote>
+<blockquote>
+<p>– 子查询方式 第二种(作为 一张表 使用) select</p>
+<p>p.*</p>
+<p>FROM<br> products p, (select * from category where cname&#x3D;’化妆品’) c</p>
+<p>WHERE</p>
+<p>p.category_id &#x3D; c.cid;</p>
+</blockquote>
+<p>###问题统计</p>
+<h6 id="1-中文乱码"><a href="#1-中文乱码" class="headerlink" title="1. 中文乱码"></a>1. 中文乱码</h6><p>因为mysql的客户端设置编码是utf8,而windows系统的cmd窗口编码是gbk</p>
+<blockquote>
+<p>show variables like ‘character%’; 查看所有mysql的编码</p>
+</blockquote>
+<ol start="2">
+<li>需要修改client、connection、results的编码一致(改为GBK编码</li>
+</ol>
+<blockquote>
+<p>set name sgbk;</p>
+</blockquote>
+<h6 id="2-密码忘记"><a href="#2-密码忘记" class="headerlink" title="2.密码忘记"></a>2.密码忘记</h6><ol>
+<li><p>停止mysql服务器运行输入services.msc 停止mysql服务</p>
+</li>
+<li><p>在cmd下,输入mysqld –console –skip-grant-tables 启动服务器,不要关闭出现的窗口</p>
+</li>
+<li><p>新打开cmd,输入mysql -uroot 不需要密码, 然后输入以下SQL语句, 完成密码的修改</p>
+</li>
+</ol>
+<blockquote>
+<p>usemysql; update user set password&#x3D;password(‘root’) WHERE user&#x3D;’root’;</p>
+</blockquote>
+<h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><h5 id="1-面试题"><a href="#1-面试题" class="headerlink" title="1.面试题"></a>1.面试题</h5><ol>
+<li><p>针对auto_increment ，删除表中所有记录使用 delete from 表名 或使用 truncate table 表名，二 者有什么区别?</p>
+<blockquote>
+<p>1删除过程:<br> 2 delete: 表中记录一条一条删除, auto_increment 计数不会重置为1; 新记录添加时在原有计数基础上+1</p>
+<p> 3 truncate: 直接将表删除,重新创建新表, auto_increment 计数重置为1;</p>
+</blockquote>
+</li>
+</ol>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 337950548@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2022 想做个&#34;懒&#34;人
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>linux操作系统 | Hexo</title>
+  <meta name="keywords" content=" linux base ">
+  <meta name="description" content="linux操作系统 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="只属于我的博客一直想拥有自己的博客,可以自言自语,随时随地的写自己的所思所想，😝今天终于拥有了自己的博客,鸡冻鸡冻,没事的时候来这边逛逛,走走自己的痕迹,那也不亦乐乎😆 关于我想做”懒人”到目前为止已经写了篇文章， 共字。 本站访问人数：人次 ， 访问量：次 博客平台这个博客通过 Hexo 生成，部署在 GitHub Pages，主题 是根据 3-hexo 这个主题进行配置的 主要功能：  搜">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="只属于我的博客一直想拥有自己的博客,可以自言自语,随时随地的写自己的所思所想，😝今天终于拥有了自己的博客,鸡冻鸡冻,没事的时候来这边逛逛,走走自己的痕迹,那也不亦乐乎😆 关于我想做”懒人”到目前为止已经写了篇文章， 共字。 本站访问人数：人次 ， 访问量：次 博客平台这个博客通过 Hexo 生成，部署在 GitHub Pages，主题 是根据 3-hexo 这个主题进行配置的 主要功能：  搜">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-07-18T07:16:04.090Z">
+<meta property="article:modified_time" content="2019-08-15T13:41:00.000Z">
+<meta property="article:author" content="想做个&quot;懒&quot;人">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>想做个&#34;懒&#34;人</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/datafu"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="facebook"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(27)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="工具">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        工具
+                        <small>(9)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="工具<--->git">
+                                        
+                                        git
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->mac">
+                                        
+                                        mac
+                                        
+                                            <small>(4
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->markdown">
+                                        
+                                        markdown
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->mysql">
+                                        
+                                        mysql
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->vscode">
+                                        
+                                        vscode
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="大前端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        大前端
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="大前端<--->ios">
+                                        
+                                        ios
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="大前端<--->web">
+                                        
+                                        web
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        后端
+                        <small>(7)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="后端<--->java_use">
+                                        
+                                        java_use
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->mybatis">
+                                        
+                                        mybatis
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->redis">
+                                        
+                                        redis
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->Springboot">
+                                        
+                                        Springboot
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->springcloudalibaba">
+                                        
+                                        springcloudalibaba
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->webrtc">
+                                        
+                                        webrtc
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="架构">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        架构
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="架构<--->cap">
+                                        
+                                        cap
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="思考">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        思考
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="思考<--->得到">
+                                        
+                                        得到
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="OS">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        OS
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="OS<--->linux">
+                                        
+                                        linux
+                                        
+                                            <small>(4
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="snippet">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        snippet
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="snippet<--->java">
+                                        
+                                        java
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="27">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>财富自由</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>重学前端</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>apt</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cap</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ios</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java_snippet</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux base</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mybatis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>myqsql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mysql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>redis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>shell</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>socket</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>springboot</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>springcloudalibaba</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>terminal</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>tomcat</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>use</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vscode</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>webrtc</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All OS linux "
+           href="/2022/07/22/linux/linuxcommand/apt-install/"
+           data-tag="apt"
+           data-author="" >
+            <span class="post-title" title="apt">apt</span>
+            <span class="post-date" title="2022-07-22 09:29:40">2022/07/22</span>
+        </a>
+        
+        
+        <a  class="All 工具 git "
+           href="/2022/07/22/tools/git/git-flow/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git flow">git flow</span>
+            <span class="post-date" title="2022-07-22 09:29:40">2022/07/22</span>
+        </a>
+        
+        
+        <a  class="All 后端 redis "
+           href="/2022/07/22/back_end/java/redis/redis/"
+           data-tag="redis"
+           data-author="" >
+            <span class="post-title" title="redis 的使用">redis 的使用</span>
+            <span class="post-date" title="2022-07-22 09:29:40">2022/07/22</span>
+        </a>
+        
+        
+        <a  class="All 工具 mysql "
+           href="/2021/10/04/tools/server-tools/mysql/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="mysql安装">mysql安装</span>
+            <span class="post-date" title="2021-10-04 13:29:40">2021/10/04</span>
+        </a>
+        
+        
+        <a  class="All 架构 cap "
+           href="/2021/10/04/architecture/base/"
+           data-tag="cap"
+           data-author="" >
+            <span class="post-title" title="cap">cap</span>
+            <span class="post-date" title="2021-10-04 11:29:40">2021/10/04</span>
+        </a>
+        
+        
+        <a  class="All 后端 springcloudalibaba "
+           href="/2021/10/04/back_end/java/Springcloudalibaba/init/"
+           data-tag="springcloudalibaba"
+           data-author="" >
+            <span class="post-title" title="springcloudalibaba">springcloudalibaba</span>
+            <span class="post-date" title="2021-10-04 11:29:40">2021/10/04</span>
+        </a>
+        
+        
+        <a  class="All OS linux "
+           href="/2021/10/02/linux/linuxcommand/shell/"
+           data-tag="shell"
+           data-author="" >
+            <span class="post-title" title="linux shell脚本">linux shell脚本</span>
+            <span class="post-date" title="2021-10-02 12:20:40">2021/10/02</span>
+        </a>
+        
+        
+        <a  class="All 后端 Springboot "
+           href="/2021/10/01/back_end/java/SprintBoot/springboot/"
+           data-tag="springboot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot">SpringBoot</span>
+            <span class="post-date" title="2021-10-01 22:29:40">2021/10/01</span>
+        </a>
+        
+        
+        <a  class="All OS linux "
+           href="/2021/10/01/linux/linuxcommand/linux/"
+           data-tag="linux base"
+           data-author="" >
+            <span class="post-title" title="linux操作系统">linux操作系统</span>
+            <span class="post-date" title="2021-10-01 09:29:40">2021/10/01</span>
+        </a>
+        
+        
+        <a  class="All 后端 java_use "
+           href="/2021/06/21/back_end/java/base_use/"
+           data-tag="use"
+           data-author="" >
+            <span class="post-title" title="Java 一些语法的使用">Java 一些语法的使用</span>
+            <span class="post-date" title="2021-06-21 16:29:40">2021/06/21</span>
+        </a>
+        
+        
+        <a  class="All 后端 java_use "
+           href="/2021/06/21/back_end/java/mysql/mysql/"
+           data-tag="myqsql"
+           data-author="" >
+            <span class="post-title" title="mysql基本知识">mysql基本知识</span>
+            <span class="post-date" title="2021-06-21 16:29:40">2021/06/21</span>
+        </a>
+        
+        
+        <a  class="All snippet java "
+           href="/2021/06/17/SnippetsLab/java/read/"
+           data-tag="java_snippet"
+           data-author="" >
+            <span class="post-title" title="java 代码块">java 代码块</span>
+            <span class="post-date" title="2021-06-17 16:58:51">2021/06/17</span>
+        </a>
+        
+        
+        <a  class="All OS linux "
+           href="/2021/06/17/linux/%E8%B6%A3%E8%B0%88linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/base/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux操作系统">linux操作系统</span>
+            <span class="post-date" title="2021-06-17 15:29:40">2021/06/17</span>
+        </a>
+        
+        
+        <a  class="All 后端 webrtc "
+           href="/2021/06/15/back_end/WebRtc/WebRtc%20Navite/"
+           data-tag="webrtc"
+           data-author="" >
+            <span class="post-title" title="webrtc">webrtc</span>
+            <span class="post-date" title="2021-06-15 16:29:40">2021/06/15</span>
+        </a>
+        
+        
+        <a  class="All 后端 mybatis "
+           href="/2021/06/15/back_end/mybatis/mybatis/"
+           data-tag="mybatis"
+           data-author="" >
+            <span class="post-title" title="mybatis">mybatis</span>
+            <span class="post-date" title="2021-06-15 16:29:40">2021/06/15</span>
+        </a>
+        
+        
+        <a  class="All 工具 git "
+           href="/2021/06/14/tools/git/git-base/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git 简单语法">git 简单语法</span>
+            <span class="post-date" title="2021-06-14 09:29:40">2021/06/14</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/09/30/front-end/web/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF/"
+           data-tag="重学前端"
+           data-author="" >
+            <span class="post-title" title="&lt;极客时间&gt; 重学前端课程">&lt;极客时间&gt; 重学前端课程</span>
+            <span class="post-date" title="2019-09-30 16:10:08">2019/09/30</span>
+        </a>
+        
+        
+        <a  class="All 思考 得到 "
+           href="/2019/09/30/thinking/%20Financial%20Free/"
+           data-tag="财富自由"
+           data-author="" >
+            <span class="post-title" title="财富自由之路">财富自由之路</span>
+            <span class="post-date" title="2019-09-30 15:29:40">2019/09/30</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/29/tools/server-tools/socket/"
+           data-tag="socket"
+           data-author="" >
+            <span class="post-title" title="mac 下安装socekt网络调试工具">mac 下安装socekt网络调试工具</span>
+            <span class="post-date" title="2019-09-29 09:29:40">2019/09/29</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/29/tools/server-tools/terminal/"
+           data-tag="terminal"
+           data-author="" >
+            <span class="post-title" title="mac 下安装terminal 窗口管理工具">mac 下安装terminal 窗口管理工具</span>
+            <span class="post-date" title="2019-09-29 09:29:40">2019/09/29</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/23/tools/server-tools/tomcat/"
+           data-tag="tomcat"
+           data-author="" >
+            <span class="post-title" title="mac 下安装redis">mac 下安装redis</span>
+            <span class="post-date" title="2019-09-23 19:29:40">2019/09/23</span>
+        </a>
+        
+        
+        <a  class="All 工具 markdown "
+           href="/2019/08/16/tools/markdown/read/"
+           data-tag="markdown"
+           data-author="" >
+            <span class="post-title" title="markdown简单语法">markdown简单语法</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 工具 vscode "
+           href="/2019/08/16/tools/vscode/vscode/"
+           data-tag="vscode"
+           data-author="" >
+            <span class="post-title" title="vscode快捷键使用">vscode快捷键使用</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/08/16/tools/server-tools/redis/"
+           data-tag="redis"
+           data-author="" >
+            <span class="post-title" title="mac 下安装redis">mac 下安装redis</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 大前端 ios "
+           href="/2019/08/15/front-end/ios/ios/"
+           data-tag="ios"
+           data-author="" >
+            <span class="post-title" title="ios">ios</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/08/15/front-end/web/Hexo-Github/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="mac下搭建Hexo-Github博客">mac下搭建Hexo-Github博客</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/08/15/front-end/web/vue/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="vue学习之旅">vue学习之旅</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-linux/linuxcommand/linux" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">linux操作系统</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="OS">OS</a> > 
+            
+            <a  data-rel="OS&lt;---&gt;linux">linux</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">linux base</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2022-07-18 16:24:40'>2021-10-01 09:29</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-text">软件下载相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BDtldr"><span class="toc-text">1. 下载tldr</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-scp"><span class="toc-text">1. scp</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-wget"><span class="toc-text">2.wget</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#1-ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95"><span class="toc-text">1. ssh免密登录</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-Zsh-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">2.  Zsh 配置文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3"><span class="toc-text">文件相关</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-linux-%E6%80%BB%E7%BB%93%E4%B8%BA%E4%B8%83%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%96%87%E4%BB%B6"><span class="toc-text">1.linux 总结为七种基本文件</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90"><span class="toc-text">2.文件权限</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-Linux-%E7%94%A8%E6%88%B7"><span class="toc-text">3.Linux 用户</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-zsh"><span class="toc-text">4. zsh</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#zshrc-%E5%AE%9E%E6%88%98"><span class="toc-text">zshrc 实战</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#5-%E9%80%9A%E9%85%8D%E7%AC%A6"><span class="toc-text">5. 通配符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86"><span class="toc-text">任务管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-text">重定向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%A1%E9%81%93"><span class="toc-text">管道</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-text">转义字符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E7%9B%B8%E5%85%B3"><span class="toc-text">系统参数相关</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95"><span class="toc-text">文件与目录</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%AF%BB%E6%96%87%E4%BB%B6"><span class="toc-text">读文件</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AE%9E%E6%88%98"><span class="toc-text">实战</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%9F%A5%E6%89%BE"><span class="toc-text">文件查找</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-text">用户管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86"><span class="toc-text">进程管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%8F%90%E5%8F%96-%E5%88%86%E5%89%B2"><span class="toc-text">数据提取-分割</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6"><span class="toc-text">可用的软件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#htop-%E4%BA%A4%E4%BA%92%E5%BC%8F%E7%9A%84%E8%BF%9B%E7%A8%8B%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-text">htop -交互式的进程浏览器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#nmon-%E6%98%BE%E7%A4%BA%E6%89%80%E6%9C%89%E9%87%8D%E8%A6%81%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%BF%A1%E6%81%AF"><span class="toc-text">nmon -显示所有重要的性能优化信息</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%BE%93%E5%85%A5-nmon"><span class="toc-text">输入 nmon</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%8F%AF%E5%8F%82%E8%80%83%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-text">可参考的命令</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>主要记录关于linux 操作系统的知识</p>
+<h2 id="软件下载相关命令"><a href="#软件下载相关命令" class="headerlink" title="软件下载相关命令"></a>软件下载相关命令</h2><p>首先更新下系统下的库</p>
+<blockquote>
+<p>sudo apt update</p>
+</blockquote>
+<h5 id="1-下载tldr"><a href="#1-下载tldr" class="headerlink" title="1. 下载tldr"></a>1. 下载tldr</h5><p>这是个简单版的 man 指令库</p>
+<blockquote>
+<p>sudo apt install tldr</p>
+<p> tldr ls</p>
+</blockquote>
+<p>####进程 命令</p>
+<h6 id="1-scp"><a href="#1-scp" class="headerlink" title="1. scp"></a>1. scp</h6><blockquote>
+<p> scp  -P 8080 a.txt  root@xxxx:&#x2F;home&#x2F;</p>
+</blockquote>
+<h6 id="2-wget"><a href="#2-wget" class="headerlink" title="2.wget"></a>2.wget</h6><blockquote>
+<p>wget <a target="_blank" rel="noopener" href="https://xxxxx:8080/data.sh">https://xxxxx:8080/data.sh</a></p>
+</blockquote>
+<p>####环境变量配置</p>
+<h6 id="1-ssh免密登录"><a href="#1-ssh免密登录" class="headerlink" title="1. ssh免密登录"></a>1. ssh免密登录</h6><ol>
+<li><p>设置别名</p>
+<blockquote>
+<p>vi &#x2F;ets&#x2F;hosts</p>
+<p>xxx.xx.xx.xx webrtc</p>
+<p>alias xxx. a1</p>
+</blockquote>
+</li>
+</ol>
+<p>![image-20211001113644762](&#x2F;Users&#x2F;fushp&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20211001113644762.png)</p>
+<p>将 id_rsa.pub 公钥 发给 服务端的 authorized_keys</p>
+<ul>
+<li><p>手动</p>
+<p>看下是否存在公钥 私钥,没有创建一个  </p>
+<blockquote>
+<p>Sh-keygen</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>Cat .ssh&#x2F;id_rsa.pub</p>
+</blockquote>
+<ul>
+<li><p>自动</p>
+<blockquote>
+<p>ssh-copy-id fushp@xxx.</p>
+</blockquote>
+</li>
+</ul>
+<h6 id="2-Zsh-配置文件"><a href="#2-Zsh-配置文件" class="headerlink" title="2.  Zsh 配置文件"></a>2.  Zsh 配置文件</h6><blockquote>
+<p>vim .zshrc</p>
+<p>alias t_y&#x3D; “ssh -p 80 xxx.xxs”</p>
+<p>source .zshrc</p>
+<p>t_y</p>
+</blockquote>
+<p>####软件安装</p>
+<p>linux  一个软件包内容分别被拷贝到同级别的 bin lib share etc 目录下</p>
+<ul>
+<li><p>bin </p>
+<p> 可执行文件</p>
+</li>
+<li><p>lib </p>
+<p> 库文件集中存放</p>
+</li>
+<li><p>share </p>
+<p>存放程序需要的其他资源</p>
+</li>
+<li><p>etc</p>
+<p> 配置文件存放路经</p>
+</li>
+</ul>
+<h4 id="文件相关"><a href="#文件相关" class="headerlink" title="文件相关"></a>文件相关</h4><h6 id="1-linux-总结为七种基本文件"><a href="#1-linux-总结为七种基本文件" class="headerlink" title="1.linux 总结为七种基本文件"></a>1.linux 总结为七种基本文件</h6><ul>
+<li>-: reqular file</li>
+<li>d : 目录</li>
+<li>l : 链接</li>
+<li>b: block 块设备</li>
+<li>c: character 字符设备</li>
+<li>s: socket 套接字</li>
+<li>p : pipe 管道</li>
+</ul>
+<h6 id="2-文件权限"><a href="#2-文件权限" class="headerlink" title="2.文件权限"></a>2.文件权限</h6><ul>
+<li><p>chmod</p>
+<p>更改文件权限</p>
+</li>
+<li><p>chown</p>
+<p>更改文件所属用户</p>
+</li>
+<li><p>chgrp</p>
+<p> 更改文件所属组</p>
+</li>
+</ul>
+<h6 id="3-Linux-用户"><a href="#3-Linux-用户" class="headerlink" title="3.Linux 用户"></a>3.Linux 用户</h6><p>Linux 用户分两类:</p>
+<ul>
+<li>root</li>
+<li>普通用户</li>
+</ul>
+<h6 id="4-zsh"><a href="#4-zsh" class="headerlink" title="4. zsh"></a>4. zsh</h6><p>一款强大的shell 解释器</p>
+<p><strong>安装</strong></p>
+<p>​	sudo apt update </p>
+<p>   sudo apt install zsh</p>
+<p> <strong>配置文件</strong></p>
+<p> ~&#x2F;.zshrc</p>
+<p>~&#x2F;.zlogin</p>
+<p>~&#x2F;.zlogout</p>
+<p>~&#x2F;.zprofile</p>
+<p><strong>全局配置文件</strong></p>
+<blockquote>
+<p>&#x2F;etc&#x2F;zshrc</p>
+</blockquote>
+<p>.zshrc</p>
+<blockquote>
+<p>echo “we are coming…”</p>
+</blockquote>
+<h5 id="zshrc-实战"><a href="#zshrc-实战" class="headerlink" title="zshrc 实战"></a>zshrc 实战</h5><blockquote>
+<p>last | cut -d : -f 1 | grep fush | wc -l</p>
+</blockquote>
+<blockquote>
+<p>实现每次通过远程连接进入系统时，告知用户如下信息</p>
+</blockquote>
+<blockquote>
+<ol>
+<li><p>最近一段时间，当前用户，也就是你，登录了多少次last</p>
+</li>
+<li><p>上一次登录系统，停留了多少时间</p>
+</li>
+<li><p>给用户推荐一句名人名言，唐诗三百首之类的</p>
+</li>
+<li><p>最好还能告知一下当地当日天气预</p>
+</li>
+<li><p>一个温馨的问候</p>
+</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>last | head -n 1</p>
+<p>获取秒值: data +%s</p>
+<p>获取所在地天气: curl wttr.in</p>
+<p>哪里有理性智慧，哪里就有尊严。——马丹·杜·加尔</p>
+</blockquote>
+<p><strong>操作指令</strong></p>
+<ol>
+<li><p>移动到头</p>
+<blockquote>
+<p>Control + a</p>
+</blockquote>
+</li>
+<li><p>移动到尾</p>
+<blockquote>
+<p>control +e</p>
+</blockquote>
+</li>
+<li><p>删除到尾部</p>
+</li>
+</ol>
+<blockquote>
+<p>ctrl +k</p>
+</blockquote>
+<ol start="4">
+<li>删除一个单词</li>
+</ol>
+<blockquote>
+<p>ctrl + w</p>
+</blockquote>
+<ol start="5">
+<li>清空整行</li>
+</ol>
+<blockquote>
+<p>ctrl + u</p>
+</blockquote>
+<h6 id="5-通配符"><a href="#5-通配符" class="headerlink" title="5. 通配符"></a>5. 通配符</h6><ul>
+<li><em>[a| b]</em></li>
+</ul>
+<blockquote>
+<p>包括 a 或者 b的文件</p>
+</blockquote>
+<h4 id="任务管理"><a href="#任务管理" class="headerlink" title="任务管理"></a>任务管理</h4><blockquote>
+<ul>
+<li>&amp;               后台管理</li>
+<li>ctrl+z       命令挂起</li>
+<li>bg              后台执行</li>
+<li>fg                前台执行</li>
+<li>jobs           查看挂起</li>
+</ul>
+</blockquote>
+<h4 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h4><ul>
+<li>“&gt;”  重定向右边</li>
+<li>“&gt;&gt;” 追加到尾部</li>
+<li>“&lt;”  重定向到左边</li>
+</ul>
+<h4 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h4><blockquote>
+<ul>
+<li><p>“ | “  </p>
+<p>Cat ls.log | tr -c -s “a-zA-Z” “\n” | sort | uniq -c |sort  -n  -r | more | head - n 10</p>
+</li>
+</ul>
+</blockquote>
+<h4 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h4><p>有些字符有特殊到意思,所以需要加上 转义字符来让它变成普通字符</p>
+<blockquote>
+<ul>
+<li>\  转义字符</li>
+</ul>
+<p>print f(“a +n”, a + \</p>
+<p>n); &#x2F;&#x2F;加了之后 实际效果就是 printf(“a+n”,a+n);</p>
+</blockquote>
+<h4 id="系统参数相关"><a href="#系统参数相关" class="headerlink" title="系统参数相关"></a>系统参数相关</h4><blockquote>
+<p>updatime </p>
+<ul>
+<li>-p </li>
+<li>-s   当前时间</li>
+<li>-V</li>
+</ul>
+<p> w  :获取当前登录信息</p>
+<p>who: 当前登录信息 和 w 命令有点相似</p>
+<ul>
+<li>who am i</li>
+</ul>
+<p>last : 显示用户最近登录信息</p>
+<p> last -f &#x2F;var&#x2F;log&#x2F;wtmp.1</p>
+<p>-f <file> : 指定文件</p>
+<p>-n&lt; num&gt; : 指定输出记录数</p>
+<p>-x: 显示系统关机,重新光机等信</p>
+<p>lastlog : 打印最后一次登录时间</p>
+<p>uname -a  : 系统信息</p>
+<p>cat  &#x2F;etc&#x2F;os-release : 具体 系统信息</p>
+<p>date : 显示 修改系统时间</p>
+<p>write : 给其他用户发信息</p>
+<p>wall :  广播信息</p>
+<ol>
+<li><p>nethogs -检测系统占⽤带宽情况</p>
+</li>
+<li><p>htop -交互式的进程浏览器 </p>
+</li>
+<li><p>nmon -显示所有重要的性能优化信息 </p>
+</li>
+<li><p>dstat -全能信息统计⼯具</p>
+</li>
+</ol>
+</blockquote>
+<h3 id="文件与目录"><a href="#文件与目录" class="headerlink" title="文件与目录"></a>文件与目录</h3><ul>
+<li><p>软连接 硬链接</p>
+<blockquote>
+<p>&#x2F;&#x2F;硬链接</p>
+<p>cp -l a c</p>
+</blockquote>
+<blockquote>
+<p>&#x2F;&#x2F;软链接</p>
+<p>cp -s a b</p>
+<p>&#x2F;&#x2F;删除</p>
+</blockquote>
+</li>
+<li><p>rm </p>
+<blockquote>
+<p>-i : 互动模式</p>
+<p>-r: 递归</p>
+<p>-f : force</p>
+</blockquote>
+</li>
+</ul>
+<h6 id="读文件"><a href="#读文件" class="headerlink" title="读文件"></a>读文件</h6><ul>
+<li><p>od 用二进制查看内容</p>
+</li>
+<li><p>cat 正向读文件 </p>
+<p>读完之后,直接选中内容进行拷贝,可从ububtu拷贝到本机中</p>
+</li>
+<li><p>head</p>
+</li>
+<li><p>tail </p>
+</li>
+<li><p>more</p>
+</li>
+<li><p>lsattr 文件属性</p>
+<blockquote>
+<p>-a </p>
+<p>-d 显示目录信息</p>
+<p>-R 递归</p>
+</blockquote>
+</li>
+<li><p>chattr 修改属性</p>
+</li>
+<li><p>文件特殊权限</p>
+</li>
+</ul>
+<blockquote>
+<p>名称                  简称</p>
+<p>SUID:                   S    二进制文件</p>
+<p>SGID:                   S</p>
+<p>SBIT:                     t  该目录下 只能自己删除文件</p>
+</blockquote>
+<h6 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h6><blockquote>
+<ol>
+<li>查看文件 100 到110行</li>
+</ol>
+<p>【一】cat 文件名 | tail -n +100 | head -n 10<br>【二】cat 文件名 | head -n 110 | tail -n +100</p>
+<p>tail -n 100：显示最后100行<br>tail -n +100：从100行开始显示，显示100行以后的</p>
+<p>head -n 100：显示前100行</p>
+</blockquote>
+<h6 id="文件查找"><a href="#文件查找" class="headerlink" title="文件查找"></a>文件查找</h6><ul>
+<li><p>which  寻找可执行文件</p>
+</li>
+<li><p>locate 搜索文件</p>
+<blockquote>
+<p>updatedb :添加索引 在查找</p>
+</blockquote>
+</li>
+<li><p>whereis 寻找特定文件</p>
+</li>
+<li><p>find 高级查找</p>
+<blockquote>
+<p>find [ PATH] [option] [action]</p>
+<p>Option: </p>
+<p>-mtime n: n天前“一天之内”修改的文件</p>
+<p>-mtime +n: n天之前,不包含n</p>
+<p>-mtime -n: n天之内 包含n天</p>
+<p>-newer file:</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h4><ul>
+<li><p>cat &#x2F;etc&#x2F;passwd</p>
+<p>root:x:0:0:root:&#x2F;root:&#x2F;bin&#x2F;bash</p>
+<p> x: 密码</p>
+<p>0:0:  uid gid</p>
+</li>
+<li><p>cat &#x2F;etc&#x2F;shadow 密码详情</p>
+</li>
+<li><p>usermod </p>
+</li>
+<li><p>userdel </p>
+</li>
+<li><p>useradd</p>
+</li>
+<li><p>sudo</p>
+</li>
+<li><p>id</p>
+</li>
+<li><p>passwd</p>
+</li>
+</ul>
+<h4 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h4><ul>
+<li><p>free 打印内存系统</p>
+</li>
+<li><p>dstat 实时监控磁盘 cpu</p>
+</li>
+<li><p>pstree  用 树显示进程派生关系</p>
+</li>
+<li><p>kill 删除进程</p>
+</li>
+<li><p>top 显示当前系统进程情况</p>
+</li>
+<li><p>ps 报告当前进程情况</p>
+<blockquote>
+<p>ps -aux </p>
+</blockquote>
+</li>
+<li><p>pgrep 查找进程id</p>
+</li>
+<li><p>pkill  批量删除进程</p>
+</li>
+</ul>
+<h4 id="数据提取-分割"><a href="#数据提取-分割" class="headerlink" title="数据提取-分割"></a>数据提取-分割</h4><blockquote>
+<ul>
+<li><p>cut   [-dfc] file.   切分 </p>
+<blockquote>
+<p>-d c:  以 c 字符分割</p>
+<p>-f num: 显示num字段内容</p>
+<p>-b num:  哪个字节 </p>
+<p>-c num: 字符</p>
+<p>例子:</p>
+<p>​     cut &#x2F;etc&#x2F;passwd </p>
+<p>​    cut -d “:” -f 1-7  passwd</p>
+<p>​	cut -b 1-10 passwd</p>
+</blockquote>
+</li>
+<li><p>sort 排序</p>
+</li>
+<li><p>uniq 去重</p>
+</li>
+</ul>
+<blockquote>
+<p>-c : 统计</p>
+<p>last | cut -d “ “ -f 1 |   sort |   uniq -c</p>
+</blockquote>
+<ul>
+<li><p>split  文件切分</p>
+</li>
+<li><p>tr 替换 压缩 删除</p>
+<blockquote>
+<p>tr [cdst]  字符 字符</p>
+<p>-c : 取代所有不属于第一个字符集的字符</p>
+<p>-d 删除所有术语第一字符集的字符</p>
+<p>-s 连续重复的字符已单独一个字符表示</p>
+<p>-t 先删除第一字符集较第二个字符集多出的字符</p>
+</blockquote>
+</li>
+<li><p>grep  检索</p>
+</li>
+</ul>
+<blockquote>
+<p>Cat  file | cut -d : -f 1 | grep fush</p>
+<p>-v : 删除得到的行</p>
+<p>grep -v “^$” ss.x &#x2F;&#x2F; 表示删除空行</p>
+</blockquote>
+<ul>
+<li><p>wc 统计字符 字数 行数</p>
+</li>
+<li><p>tee 双向重定向</p>
+<blockquote>
+<p>可输入到文件  同时显示到屏幕中</p>
+</blockquote>
+</li>
+<li><p>xargs 参数代换</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="可用的软件"><a href="#可用的软件" class="headerlink" title="可用的软件"></a>可用的软件</h2><p>#####nethogs -检测系统占⽤带宽情况 </p>
+<p>一个能够按进程实时统计网络带宽利用率的工具</p>
+<ul>
+<li>Start nethogs as root (default device is eth0):<br> sudo nethogs</li>
+<li>Monitor bandwidth on specific device:<br>sudo nethogs </li>
+<li>Monitor bandwidth on multiple devices:<br>sudo nethogs  </li>
+<li>Specify refresh rate:<br>sudo nethogs -t </li>
+</ul>
+<blockquote>
+<p>&#x2F;&#x2F;可以获取到所有设备的带宽</p>
+<p>sudo nethogs</p>
+</blockquote>
+<p>![image-20211007141638133](&#x2F;Users&#x2F;fushp&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20211007141638133.png)</p>
+<h5 id="htop-交互式的进程浏览器"><a href="#htop-交互式的进程浏览器" class="headerlink" title="htop -交互式的进程浏览器"></a>htop -交互式的进程浏览器</h5><p>下图中将输出的界面划分成了四个区域，其中：</p>
+<p> 1.上左区：显示了CPU、物理内存和交换分区的信息； </p>
+<p>2.上右区：显示了任务数量、平均负载和连接运行时间等信息； 3.进程区域：显示出当前系统中的所有进程；</p>
+<p> 操作提示区：显示了当前界面中F1-F10功能键中定义的快捷功能。 </p>
+<p>4.F1：显示帮助信息</p>
+<p>![image-20211007143246489](&#x2F;Users&#x2F;fushp&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20211007143246489.png)</p>
+<h5 id="nmon-显示所有重要的性能优化信息"><a href="#nmon-显示所有重要的性能优化信息" class="headerlink" title="nmon -显示所有重要的性能优化信息"></a>nmon -显示所有重要的性能优化信息</h5><p>nmon是一种广泛使用的监控与分析工具，它能在系统运行过程中实时地捕捉系统资源的使用情况，记录的信息比较全面，</p>
+<p>并且能输出结果到文件中，然后通过nmon_analyzer工具产生数据文件与图形化结果</p>
+<h6 id="输入-nmon"><a href="#输入-nmon" class="headerlink" title="输入 nmon"></a>输入 nmon</h6><p>![image-20211007144137248](&#x2F;Users&#x2F;fushp&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20211007144137248.png)</p>
+<p>输入里面的参数可以查看不同的信息</p>
+<p>![image-20211007144347646](&#x2F;Users&#x2F;fushp&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20211007144347646.png)</p>
+<hr>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># c</span><br><span class="line">查看CPU相关信息</span><br><span class="line"># m</span><br><span class="line">查看内存相关信息</span><br><span class="line"># d          </span><br><span class="line">查看磁盘相关信息</span><br><span class="line"># n          </span><br><span class="line">查看网络相关信息</span><br><span class="line"># t</span><br><span class="line">查看相关进程信息</span><br><span class="line"># h          </span><br><span class="line">查看帮助相关信息</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>#####dstat -全能信息统计⼯具 </p>
+<p>直接使用dstat，默认使用的是-cdngy参数，分别显示cpu、disk、net、page、system信息</p>
+<p>![image-20211007144612203](&#x2F;Users&#x2F;fushp&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20211007144612203.png)</p>
+<h6 id="可参考的命令"><a href="#可参考的命令" class="headerlink" title="可参考的命令"></a>可参考的命令</h6><blockquote>
+<p><a target="_blank" rel="noopener" href="http://lnmp.ailinux.net/nethogs">http://lnmp.ailinux.net/nethogs</a></p>
+</blockquote>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 337950548@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2022 想做个&#34;懒&#34;人
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
