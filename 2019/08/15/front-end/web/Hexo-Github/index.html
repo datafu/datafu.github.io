@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>mac下搭建Hexo-Github博客 | Hexo</title>
+  <meta name="keywords" content=" hexo ">
+  <meta name="description" content="mac下搭建Hexo-Github博客 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="只属于我的博客一直想拥有自己的博客,可以自言自语,随时随地的写自己的所思所想，😝今天终于拥有了自己的博客,鸡冻鸡冻,没事的时候来这边逛逛,走走自己的痕迹,那也不亦乐乎😆 关于我想做”懒人”到目前为止已经写了篇文章， 共字。 本站访问人数：人次 ， 访问量：次 博客平台这个博客通过 Hexo 生成，部署在 GitHub Pages，主题 是根据 3-hexo 这个主题进行配置的 主要功能：  搜">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="只属于我的博客一直想拥有自己的博客,可以自言自语,随时随地的写自己的所思所想，😝今天终于拥有了自己的博客,鸡冻鸡冻,没事的时候来这边逛逛,走走自己的痕迹,那也不亦乐乎😆 关于我想做”懒人”到目前为止已经写了篇文章， 共字。 本站访问人数：人次 ， 访问量：次 博客平台这个博客通过 Hexo 生成，部署在 GitHub Pages，主题 是根据 3-hexo 这个主题进行配置的 主要功能：  搜">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-07-18T07:16:04.090Z">
+<meta property="article:modified_time" content="2019-08-15T13:41:00.000Z">
+<meta property="article:author" content="想做个&quot;懒&quot;人">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>想做个&#34;懒&#34;人</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/datafu"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="facebook"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(13)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="工具">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        工具
+                        <small>(7)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="工具<--->git">
+                                        
+                                        git
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->mac">
+                                        
+                                        mac
+                                        
+                                            <small>(4
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->markdown">
+                                        
+                                        markdown
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->vscode">
+                                        
+                                        vscode
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="大前端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        大前端
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="大前端<--->ios">
+                                        
+                                        ios
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="大前端<--->web">
+                                        
+                                        web
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="思考">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        思考
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="思考<--->得到">
+                                        
+                                        得到
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="13">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>财富自由</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>重学前端</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ios</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>redis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>socket</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>terminal</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>tomcat</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vscode</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All 工具 git "
+           href="/2022/07/16/tools/git/git/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git flow">git flow</span>
+            <span class="post-date" title="2022-07-16 09:29:40">2022/07/16</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/09/30/front-end/web/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF/"
+           data-tag="重学前端"
+           data-author="" >
+            <span class="post-title" title="&lt;极客时间&gt; 重学前端课程">&lt;极客时间&gt; 重学前端课程</span>
+            <span class="post-date" title="2019-09-30 16:10:08">2019/09/30</span>
+        </a>
+        
+        
+        <a  class="All 思考 得到 "
+           href="/2019/09/30/thinking/%20Financial%20Free/"
+           data-tag="财富自由"
+           data-author="" >
+            <span class="post-title" title="财富自由之路">财富自由之路</span>
+            <span class="post-date" title="2019-09-30 15:29:40">2019/09/30</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/29/tools/server-tools/socket/"
+           data-tag="socket"
+           data-author="" >
+            <span class="post-title" title="mac 下安装socekt网络调试工具">mac 下安装socekt网络调试工具</span>
+            <span class="post-date" title="2019-09-29 09:29:40">2019/09/29</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/29/tools/server-tools/terminal/"
+           data-tag="terminal"
+           data-author="" >
+            <span class="post-title" title="mac 下安装terminal 窗口管理工具">mac 下安装terminal 窗口管理工具</span>
+            <span class="post-date" title="2019-09-29 09:29:40">2019/09/29</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/23/tools/server-tools/tomcat/"
+           data-tag="tomcat"
+           data-author="" >
+            <span class="post-title" title="mac 下安装redis">mac 下安装redis</span>
+            <span class="post-date" title="2019-09-23 19:29:40">2019/09/23</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2019/09/22/tools/server-tools/mysql/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-22 18:29:01">2019/09/22</span>
+        </a>
+        
+        
+        <a  class="All 工具 markdown "
+           href="/2019/08/16/tools/markdown/read/"
+           data-tag="markdown"
+           data-author="" >
+            <span class="post-title" title="markdown简单语法">markdown简单语法</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/08/16/tools/server-tools/redis/"
+           data-tag="redis"
+           data-author="" >
+            <span class="post-title" title="mac 下安装redis">mac 下安装redis</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 工具 vscode "
+           href="/2019/08/16/tools/vscode/vscode/"
+           data-tag="vscode"
+           data-author="" >
+            <span class="post-title" title="vscode快捷键使用">vscode快捷键使用</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 大前端 ios "
+           href="/2019/08/15/front-end/ios/ios/"
+           data-tag="ios"
+           data-author="" >
+            <span class="post-title" title="ios">ios</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/08/15/front-end/web/Hexo-Github/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="mac下搭建Hexo-Github博客">mac下搭建Hexo-Github博客</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/08/15/front-end/web/vue/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="vue学习之旅">vue学习之旅</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-front-end/web/Hexo-Github" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">mac下搭建Hexo-Github博客</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="大前端">大前端</a> > 
+            
+            <a  data-rel="大前端&lt;---&gt;web">web</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">hexo</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2019-08-30 16:29:33'>2019-08-15 10:10</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-text">Hexo基本命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Hexo"><span class="toc-text">安装 Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2"><span class="toc-text">创建博客</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95"><span class="toc-text">调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E5%B8%83"><span class="toc-text">发布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98"><span class="toc-text">自定义博客主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%AF%A5%E6%95%99%E7%A8%8B%E8%BF%9B%E8%A1%8C%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA"><span class="toc-text">参考该教程进行的博客搭建</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> 我们主要是使用 GitHubPages + Hexo的方式来创建免费的博客网站,做为世界上最大的源码托管平台,github越来越受到开发者的喜欢了,所以直接基于它的产品来搭建自己的博客平台也便于自己的代码托管和文档能够尽量保持一致,而不是东放一处,西放一处的。</p>
+<h2 id="Hexo基本命令"><a href="#Hexo基本命令" class="headerlink" title="Hexo基本命令"></a>Hexo基本命令</h2><h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><ul>
+<li>安装 hexo $ npm install -g hexo</li>
+</ul>
+<h3 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h3><ul>
+<li>使用命令 <code>hexo init Blog</code> 就创建blog项目了</li>
+<li>编写一个文章,使用 <code>hexo new initBlog</code>,就可以在Blog&#x2F;source&#x2F;中看到了 initBlog.md的文件了,然后就可以写md内容了</li>
+</ul>
+<h3 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h3><p> 我们使用 <code>hexo server</code> 就可以启动服务,<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 中就可以在浏览器中查看该博客内容页了</p>
+<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><ul>
+<li>创建仓库和安装插件<br>  发布到github中,为了方便传输,我们一般使用插件的形式进行源码的传输,<br>  <code>$ npm install hexo-deployer-git --save</code>,该插件自动部署到Github上。 但是我们知道，上传到github中,我们首先需要创建一个创库才行，<br>  <strong>如图:</strong><br> <img src="/img/githubpage.jpg" alt="点击图片"></li>
+<li>安装发布插件 在博客文件夹运行下面命令 $ npm install hexo-deployer-git –save 然后在_config.yml文件修改发布的配置，最后一行改为（注意替换yourusername）</li>
+</ul>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line"> type: git  </span><br><span class="line"> //使用Git 发布</span><br><span class="line"> repo: https://github.comyourusername/yourusername.github.io.git  </span><br><span class="line"> //记得改成自己的仓库地址才行,不然代码上传不上去</span><br><span class="line"> branch: master</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>接着我们在生产和发布</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo clean</span><br><span class="line">sudo hexo g</span><br><span class="line">sudo hexo d</span><br></pre></td></tr></table></figure></li>
+<li><p>快速发布</p>
+<blockquote>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
+</blockquote>
+</li>
+<li><p>本地调试<br> <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo server</code></p>
+</li>
+<li><p>最后我们可以用过 <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;</a>:yourusername&#x2F;yourusername.github.io.git</p>
+</li>
+</ul>
+<p> 创建的仓库名要以<code>用户名.github.io</code>形式才行,不然到时候发布到github是不会有效果的.</p>
+<h3 id="自定义博客主题"><a href="#自定义博客主题" class="headerlink" title="自定义博客主题"></a>自定义博客主题</h3><p> 可以从以下方式进行主题的替换</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/plugins/">https://hexo.io/plugins/</a> 绝对可以找到你所喜欢的主题</li>
+<li><a target="_blank" rel="noopener" href="https://yelog.org/2017/03/23/3-hexo-instruction/">https://yelog.org/2017/03/23/3-hexo-instruction/</a><br> 该博客是根据该主题进行搭建的</li>
+</ul>
+<h2 id="参考该教程进行的博客搭建"><a href="#参考该教程进行的博客搭建" class="headerlink" title="参考该教程进行的博客搭建"></a>参考该教程进行的博客搭建</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.im/post/5d53c250f265da039402009d">https://juejin.im/post/5d53c250f265da039402009d</a></p>
+</blockquote>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2022 想做个&#34;懒&#34;人
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

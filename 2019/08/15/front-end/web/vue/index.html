@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>vue学习之旅 | Hexo</title>
+  <meta name="keywords" content=" vue ">
+  <meta name="description" content="vue学习之旅 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="只属于我的博客一直想拥有自己的博客,可以自言自语,随时随地的写自己的所思所想，😝今天终于拥有了自己的博客,鸡冻鸡冻,没事的时候来这边逛逛,走走自己的痕迹,那也不亦乐乎😆 关于我想做”懒人”到目前为止已经写了篇文章， 共字。 本站访问人数：人次 ， 访问量：次 博客平台这个博客通过 Hexo 生成，部署在 GitHub Pages，主题 是根据 3-hexo 这个主题进行配置的 主要功能：  搜">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="只属于我的博客一直想拥有自己的博客,可以自言自语,随时随地的写自己的所思所想，😝今天终于拥有了自己的博客,鸡冻鸡冻,没事的时候来这边逛逛,走走自己的痕迹,那也不亦乐乎😆 关于我想做”懒人”到目前为止已经写了篇文章， 共字。 本站访问人数：人次 ， 访问量：次 博客平台这个博客通过 Hexo 生成，部署在 GitHub Pages，主题 是根据 3-hexo 这个主题进行配置的 主要功能：  搜">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-07-18T07:16:04.090Z">
+<meta property="article:modified_time" content="2019-08-15T13:41:00.000Z">
+<meta property="article:author" content="想做个&quot;懒&quot;人">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>想做个&#34;懒&#34;人</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/datafu"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="facebook"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(13)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="工具">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        工具
+                        <small>(7)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="工具<--->git">
+                                        
+                                        git
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->mac">
+                                        
+                                        mac
+                                        
+                                            <small>(4
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->markdown">
+                                        
+                                        markdown
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->vscode">
+                                        
+                                        vscode
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="大前端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        大前端
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="大前端<--->ios">
+                                        
+                                        ios
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="大前端<--->web">
+                                        
+                                        web
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="思考">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        思考
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="思考<--->得到">
+                                        
+                                        得到
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="13">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>财富自由</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>重学前端</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ios</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>redis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>socket</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>terminal</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>tomcat</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vscode</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All 工具 git "
+           href="/2022/07/16/tools/git/git/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git flow">git flow</span>
+            <span class="post-date" title="2022-07-16 09:29:40">2022/07/16</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/09/30/front-end/web/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF/"
+           data-tag="重学前端"
+           data-author="" >
+            <span class="post-title" title="&lt;极客时间&gt; 重学前端课程">&lt;极客时间&gt; 重学前端课程</span>
+            <span class="post-date" title="2019-09-30 16:10:08">2019/09/30</span>
+        </a>
+        
+        
+        <a  class="All 思考 得到 "
+           href="/2019/09/30/thinking/%20Financial%20Free/"
+           data-tag="财富自由"
+           data-author="" >
+            <span class="post-title" title="财富自由之路">财富自由之路</span>
+            <span class="post-date" title="2019-09-30 15:29:40">2019/09/30</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/29/tools/server-tools/socket/"
+           data-tag="socket"
+           data-author="" >
+            <span class="post-title" title="mac 下安装socekt网络调试工具">mac 下安装socekt网络调试工具</span>
+            <span class="post-date" title="2019-09-29 09:29:40">2019/09/29</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/29/tools/server-tools/terminal/"
+           data-tag="terminal"
+           data-author="" >
+            <span class="post-title" title="mac 下安装terminal 窗口管理工具">mac 下安装terminal 窗口管理工具</span>
+            <span class="post-date" title="2019-09-29 09:29:40">2019/09/29</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/09/23/tools/server-tools/tomcat/"
+           data-tag="tomcat"
+           data-author="" >
+            <span class="post-title" title="mac 下安装redis">mac 下安装redis</span>
+            <span class="post-date" title="2019-09-23 19:29:40">2019/09/23</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2019/09/22/tools/server-tools/mysql/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-22 18:29:01">2019/09/22</span>
+        </a>
+        
+        
+        <a  class="All 工具 markdown "
+           href="/2019/08/16/tools/markdown/read/"
+           data-tag="markdown"
+           data-author="" >
+            <span class="post-title" title="markdown简单语法">markdown简单语法</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 工具 mac "
+           href="/2019/08/16/tools/server-tools/redis/"
+           data-tag="redis"
+           data-author="" >
+            <span class="post-title" title="mac 下安装redis">mac 下安装redis</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 工具 vscode "
+           href="/2019/08/16/tools/vscode/vscode/"
+           data-tag="vscode"
+           data-author="" >
+            <span class="post-title" title="vscode快捷键使用">vscode快捷键使用</span>
+            <span class="post-date" title="2019-08-16 09:29:40">2019/08/16</span>
+        </a>
+        
+        
+        <a  class="All 大前端 ios "
+           href="/2019/08/15/front-end/ios/ios/"
+           data-tag="ios"
+           data-author="" >
+            <span class="post-title" title="ios">ios</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/08/15/front-end/web/Hexo-Github/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="mac下搭建Hexo-Github博客">mac下搭建Hexo-Github博客</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        
+        <a  class="All 大前端 web "
+           href="/2019/08/15/front-end/web/vue/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="vue学习之旅">vue学习之旅</span>
+            <span class="post-date" title="2019-08-15 10:10:08">2019/08/15</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-front-end/web/vue" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">vue学习之旅</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="大前端">大前端</a> > 
+            
+            <a  data-rel="大前端&lt;---&gt;web">web</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">vue</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2019-08-30 16:21:44'>2019-08-15 10:10</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A9%E6%88%91%E4%BB%AC%E5%BC%80%E5%A7%8Bvue%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85"><span class="toc-text">让我们开始vue学习之旅</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E4%BB%AC%E5%AD%A6%E4%B9%A0%E4%B8%8B%E7%AE%80%E5%8D%95%E7%9A%84%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86"><span class="toc-text">我们学习下简单的语法知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vuex"><span class="toc-text">Vuex</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Getter"><span class="toc-text">Getter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mutation"><span class="toc-text">Mutation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Action"><span class="toc-text">Action</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-text">项目结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%86%E8%A7%A3%E6%A8%A1%E5%9D%97%E5%8C%96%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">了解模块化使用方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%8A%80%E6%9C%AF%E8%83%96vue%E8%A7%86%E9%A2%91%E8%BF%9B%E8%A1%8C%E5%AD%A6%E4%B9%A0"><span class="toc-text">参考技术胖vue视频进行学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E5%8F%82%E8%80%83%E8%AF%B7%E7%9B%B4%E6%8E%A5%E8%BF%9B%E5%85%A5%E5%AE%98%E6%96%B9%E5%AD%A6%E4%B9%A0"><span class="toc-text">具体参考请直接进入官方学习</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="让我们开始vue学习之旅"><a href="#让我们开始vue学习之旅" class="headerlink" title="让我们开始vue学习之旅"></a>让我们开始vue学习之旅</h1><p>前端技术是IT行业发展相当迅猛的一个分支,特别是移动端的迅猛发展,造就了一批批的原生开发的需求,现在人人基本一部手机在手,各类app层次不穷,社会发展之快,开发者众多,越来越多的能人参加进来进行技术的创新和改造,进一步降低人开发者的开发速度，也进一步缓解了开发者脑门的发量速减.前端技术已经慢慢从电脑端移动到手机端了,多端通用的技术越来越得到开发者和公司的青睐,不仅仅可以减低成本,还可以减少工作量。比如当今的两大巨头,安卓和苹果手机，原生开发都需要招聘两个技术人员，分别是android 和ios开发人员，而今，使用多端技术开发,只需要一个人员就可以进行开发了。大公司纷纷推出自己的多端框架,比如facebookt推荐的react native,google 推出的flutter 都是跨端技术,还是国内阿里巴巴，京东，美团 都在探索大前端的发展,而今，对于我这个原生ios开发工程师来说,未来的竞争力是否会越来越窄呢？<br>现在已经慢慢感受到这种危机感,企业就是为了赚钱,当你创造价值的能力性价比越来越低的时候,也许你离被辞退不远了,或许是你的发展道路越来窄了。<br>所以多端技术的学习,势在必行！！！！！<br>最近打算学习vue,这个是个牛逼的国人开发的一个项目,我们来了解下这个框架.<br><strong>官方解释</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，</span><br><span class="line">不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链</span><br><span class="line">以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</span><br></pre></td></tr></table></figure>
+<p>它在github上已经收到了150k颗星星,可见它受欢迎程度,我们学习肯定要学习有竞争力的技术,这样它的技术迭代还会块,如果我们在使用过程中遇到一些问题,肯定很快就解决了.如果一个技术没什么人学习,你使用了它,然后碰到了问题,而后你又不懂这个框架怎么改,忽然这个作者不维护了，那你起不是需要使用其他的技术进行重构了。<br>不多说了,让我们先从他们的语法说起呢！</p>
+<p><strong>vue知识点总览</strong></p>
+<p> <img src="/img/vue.png" alt="点击图片"></p>
+<h2 id="我们学习下简单的语法知识"><a href="#我们学习下简单的语法知识" class="headerlink" title="我们学习下简单的语法知识"></a>我们学习下简单的语法知识</h2><ul>
+<li><p>我们开始简单创建一个实现,展示 “hello”<br> <a target="_blank" rel="noopener" href="https://github.com/sunseekers/Vue/blob/master/DOME_HTML/dome1.html">详细请看 demo 源码</a><br>直接绑定变量,到时候渲染的时候就可以直接把变量替换进去了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">  &#123;&#123; message &#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">var app = new Vue(&#123;</span><br><span class="line">  el: &#x27;#app&#x27;,</span><br><span class="line">  data: &#123;</span><br><span class="line">    message: &#x27;Hello Vue!&#x27;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>我们实现一个简单增加删除功能<br>新增：input绑定点击按钮,同时在metods实现这个方法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; placeholder=&quot;添加任务&quot; class=&quot;edit&quot; autofocus v-model=&#x27;items.content&#x27; @keydown.enter=&#x27;adaTask()&#x27;&gt;</span><br><span class="line"></span><br><span class="line">methods: &#123;</span><br><span class="line">           adaTask()&#123; &#125;</span><br></pre></td></tr></table></figure>
+<p>删除: 将数组的中对象移除就好</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">removeList(index)&#123;</span><br><span class="line">				this.list.splice(index,1);</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h2><p><a target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/guide/">Vuex</a><br>每一个 Vuex 应用的核心就是 store（仓库）,”store” 基本上就是一个容器，它包含着你的应用中大部分的状态 (state)<br>Vuex 和单纯的全局对象有以下两点不同：</p>
+<p>Vuex 的状态存储是响应式的。当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新。</p>
+<p>你不能直接改变 store 中的状态。改变 store 中的状态的唯一途径就是显式地提交 (commit) mutation。这样使得我们可以方便地跟踪每一个状态的变化，从而让我们能够实现一些工具帮助我们更好地了解我们的应用。</p>
+<h3 id="Getter"><a href="#Getter" class="headerlink" title="Getter"></a>Getter</h3><p>Getter 会暴露为 store.getters 对象，你可以以属性的形式访问这些值：</p>
+<blockquote>
+<p>store.getters.doneTodos &#x2F;&#x2F; -&gt; [{ id: 1, text: ‘…’, done: true }]</p>
+</blockquote>
+<h3 id="Mutation"><a href="#Mutation" class="headerlink" title="Mutation"></a>Mutation</h3><p>更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。Vuex 中的 mutation 非常类似于事件：每个 mutation 都有一个字符串的 事件类型 (type) 和 一个 回调函数 (handler)。这个回调函数就是我们实际进行状态更改的地方，并且它会接受 state 作为第一个参数：</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  const store = new Vuex.Store(&#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">    count: 1</span><br><span class="line">  &#125;,</span><br><span class="line">  mutations: &#123;</span><br><span class="line">    increment (state) &#123;</span><br><span class="line">      // 变更状态</span><br><span class="line">      state.count++</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="Action"><a href="#Action" class="headerlink" title="Action"></a>Action</h3><p>Action 类似于 mutation，不同在于：</p>
+<ul>
+<li>Action 提交的是 mutation，而不是直接变更状态。</li>
+<li>Action 可以包含任意异步操作。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const store = new Vuex.Store(&#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">    count: 0</span><br><span class="line">  &#125;,</span><br><span class="line">  mutations: &#123;</span><br><span class="line">    increment (state) &#123;</span><br><span class="line">      state.count++</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  actions: &#123;</span><br><span class="line">    increment (context) &#123;</span><br><span class="line">      context.commit(&#x27;increment&#x27;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h3><p>Vuex 并不限制你的代码结构。但是，它规定了一些需要遵守的规则：</p>
+<p>应用层级的状态应该集中到单个 store 对象中。</p>
+<p>提交 mutation 是更改状态的唯一方法，并且这个过程是同步的。</p>
+<p>异步逻辑都应该封装到 action 里面。</p>
+<p>只要你遵守以上规则，如何组织代码随你便。如果你的 store 文件太大，只需将 action、mutation 和 getter 分割到单独的文件。</p>
+<p>对于大型应用，我们会希望把 Vuex 相关代码分割到模块中。下面是项目结构示例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">├── index.html</span><br><span class="line">├── main.js</span><br><span class="line">├── api</span><br><span class="line">│   └── ... # 抽取出API请求</span><br><span class="line">├── components</span><br><span class="line">│   ├── App.vue</span><br><span class="line">│   └── ...</span><br><span class="line">└── store</span><br><span class="line">    ├── index.js          # 我们组装模块并导出 store 的地方</span><br><span class="line">    ├── actions.js        # 根级别的 action</span><br><span class="line">    ├── mutations.js      # 根级别的 mutation</span><br><span class="line">    └── modules</span><br><span class="line">        ├── cart.js       # 购物车模块</span><br><span class="line">        └── products.js   # 产品模块</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="了解模块化使用方式"><a href="#了解模块化使用方式" class="headerlink" title="了解模块化使用方式"></a>了解模块化使用方式</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a0c11ae01991">https://www.jianshu.com/p/a0c11ae01991</a><br>熟练记住<br>dispatch actions, commit mutations</p>
+</blockquote>
+<h3 id="参考技术胖vue视频进行学习"><a href="#参考技术胖vue视频进行学习" class="headerlink" title="参考技术胖vue视频进行学习"></a>参考技术胖vue视频进行学习</h3><p> <img src="/img/vue-learn.png" alt="vue指令"><br> <a target="_blank" rel="noopener" href="https://github.com/datafu/vueDemo">demo学习</a></p>
+<p> <code>参考视频如下:</code><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av48858873/?p=11">jspang</a></p>
+<h3 id="具体参考请直接进入官方学习"><a href="#具体参考请直接进入官方学习" class="headerlink" title="具体参考请直接进入官方学习"></a>具体参考请直接进入官方学习</h3><p><a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/guide/">官方地址</a></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2022 想做个&#34;懒&#34;人
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
