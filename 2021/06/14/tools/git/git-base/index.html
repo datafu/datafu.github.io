@@ -102,7 +102,7 @@
     <li>
         <div class="all active" data-rel="All">All
             
-                <small>(29)</small>
+                <small>(30)</small>
             
         </div>
     </li>
@@ -205,7 +205,7 @@
                         <i class="fold iconfont icon-right"></i>
                         
                         大前端
-                        <small>(4)</small>
+                        <small>(5)</small>
                         
                     </div>
                     
@@ -216,7 +216,7 @@
                                         
                                         ios
                                         
-                                            <small>(2
+                                            <small>(3
                                                 )</small>
                                         
                                     </div>
@@ -561,7 +561,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="29">
+<input type="hidden" id="yelog_site_posts_number" value="30">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -615,6 +615,10 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>音频</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>直播流媒体</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -719,6 +723,15 @@
 
     
     <nav id="title-list-nav">
+        
+        
+        <a  class="All 大前端 ios "
+           href="/2022/07/31/front-end/voice/live-broadcast/"
+           data-tag="直播流媒体"
+           data-author="" >
+            <span class="post-title" title="搭建本地直播流媒体">搭建本地直播流媒体</span>
+            <span class="post-date" title="2022-07-31 16:10:08">2022/07/31</span>
+        </a>
         
         
         <a  class="All 大前端 ios "
@@ -1117,7 +1130,7 @@
 </blockquote>
 <p>3.暂存区</p>
 <p>![image-20200629202921179](&#x2F;Users&#x2F;fushp&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20200629202921179.png)</p>
-<h4 id="密钥对"><a href="#密钥对" class="headerlink" title="密钥对"></a>密钥对</h4><p>ssh-keygen -t rsa -b 4096 -C “<a href="mailto:&#x79;&#x6f;&#x75;&#114;&#95;&#101;&#109;&#x61;&#105;&#x6c;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#108;&#101;&#46;&#99;&#x6f;&#x6d;">&#x79;&#x6f;&#x75;&#114;&#95;&#101;&#109;&#x61;&#105;&#x6c;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#108;&#101;&#46;&#99;&#x6f;&#x6d;</a>“</p>
+<h4 id="密钥对"><a href="#密钥对" class="headerlink" title="密钥对"></a>密钥对</h4><p>ssh-keygen -t rsa -b 4096 -C “<a href="mailto:&#121;&#x6f;&#x75;&#x72;&#x5f;&#x65;&#109;&#97;&#105;&#x6c;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;">&#121;&#x6f;&#x75;&#x72;&#x5f;&#x65;&#109;&#97;&#105;&#x6c;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;</a>“</p>
 <p>git config –global user.name “fushuping”<br>git config –global user.email “*****.com”</p>
 <p>git config –global -unset-all </p>
 <h4 id="清空配置"><a href="#清空配置" class="headerlink" title="清空配置"></a>清空配置</h4><p>git config –global –unset user.name<br>git config –global –unset user.email</p>
@@ -1126,11 +1139,11 @@
 <h4 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h4><p>git 也要设置代理才行<br>git config –global http.proxy 192.168.13.19:***</p>
 <p>取消代理:<br>git config –unset http.proxy<br>git config –global –unset http.proxy</p>
 <h4 id="配置下github"><a href="#配置下github" class="headerlink" title="配置下github"></a>配置下github</h4><ol>
-<li><p>生成私钥 公钥<br> ssh-keygen -t rsa -C “<a href="mailto:&#120;&#x78;&#120;&#x78;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;">&#120;&#x78;&#120;&#x78;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;</a>“ -f ~&#x2F;.ssh&#x2F;id_rsa_hub<br> 使用ssh-agent代理管理git私钥: ssh-add ~&#x2F;.ssh&#x2F;id_rsa_hub</p>
+<li><p>生成私钥 公钥<br> ssh-keygen -t rsa -C “<a href="mailto:&#x78;&#120;&#120;&#120;&#x40;&#x71;&#113;&#46;&#x63;&#111;&#109;">&#x78;&#120;&#120;&#120;&#x40;&#x71;&#113;&#46;&#x63;&#111;&#109;</a>“ -f ~&#x2F;.ssh&#x2F;id_rsa_hub<br> 使用ssh-agent代理管理git私钥: ssh-add ~&#x2F;.ssh&#x2F;id_rsa_hub</p>
 </li>
 <li><p>将pub 配置到github中<br>在 GitHub 网站中的”account settings”：<br>“Setting -&gt; SSH Keys”-&gt;”New SSH key” , cat ~&#x2F;.ssh&#x2F;id_rsa.pub<br>将打印出来的内容拷贝到key中，保存</p>
 </li>
-<li><p>测试<br>ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;">&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;</a></p>
+<li><p>测试<br>ssh -T <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;">&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;</a></p>
 </li>
 </ol>
 
